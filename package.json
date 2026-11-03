@@ -1,0 +1,49 @@
+{
+  "name": "pese-ui",
+  "version": "0.1.0",
+  "description": "Librería de componentes React de PESE: SSR sin estado, SCSS, Tailwind v4 y tema daisyUI opcional.",
+  "license": "MIT",
+  "author": "Florencia Peña Sepúlveda",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./tailwind.css": "./dist/tailwind.css",
+    "./daisyui.css": "./dist/daisyui.css",
+    "./tokens.json": "./tokens/tokens.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "tokens"
+  ],
+  "scripts": {
+    "tokens": "node scripts/build-tokens.mjs",
+    "test": "tsx --test \"tests/*.test.ts\" \"tests/*.test.tsx\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "tsx": "^4.20.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
