@@ -33,7 +33,9 @@
     "typecheck": "tsc --noEmit",
     "build:js": "tsup",
     "build:css": "sass src/styles/index.scss dist/styles.css --no-source-map --style=compressed && node scripts/copy-css.mjs",
-    "build": "npm run tokens && npm run build:js && npm run build:css"
+    "build": "npm run tokens && npm run build:js && npm run build:css",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "react": ">=18"
@@ -46,7 +48,12 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tsup": "^8.5.0",
-    "sass": "^1.90.0"
+    "sass": "^1.90.0",
+    "storybook": "^10.0.0",
+    "@storybook/react-vite": "^10.0.0",
+    "@storybook/addon-a11y": "^10.0.0",
+    "@storybook/addon-docs": "^10.0.0",
+    "vite": "^7.0.0"
   },
   "engines": {
     "node": ">=20"
