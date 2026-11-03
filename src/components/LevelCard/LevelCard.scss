@@ -1,0 +1,80 @@
+.pese-level-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  margin-top: var(--pese-space-5);
+  font-family: var(--pese-font-body);
+
+  &__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--pese-space-2);
+    min-height: 230px;
+    padding: 48px var(--pese-space-5) var(--pese-space-5);
+    border-radius: var(--pese-radius-xl) var(--pese-radius-xs) var(--pese-radius-xs) var(--pese-radius-xs);
+    background: var(--pese-surface-200);
+    box-shadow: inset 0 0 0 1px var(--pese-line-strong);
+    color: var(--pese-ink);
+    // Hueco circular de 60px en la esquina superior derecha, donde encaja la insignia.
+    -webkit-mask: radial-gradient(circle 30px at calc(100% - 44px) 0, transparent 29px, #000 30px);
+    mask: radial-gradient(circle 30px at calc(100% - 44px) 0, transparent 29px, #000 30px);
+  }
+
+  &__level {
+    margin: 0;
+    font-family: var(--pese-font-mono);
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--pese-brand-strong);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--pese-font-display);
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--pese-ink-muted);
+  }
+
+  &__price {
+    margin: auto 0 0;
+    font-family: var(--pese-font-mono);
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__badge {
+    position: absolute;
+    top: -22px;
+    right: 22px;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--pese-acento);
+    color: var(--pese-on-acento);
+    font-family: var(--pese-font-display);
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &--featured &__body {
+    background: var(--pese-deep);
+    box-shadow: none;
+    color: var(--pese-on-deep);
+  }
+  &--featured &__level { color: var(--pese-acento); }
+  &--featured &__text { color: var(--pese-on-deep); }
+}

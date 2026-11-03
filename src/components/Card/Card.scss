@@ -1,0 +1,22 @@
+.pese-card {
+  padding: var(--pese-space-5);
+  border-radius: var(--pese-radius-md);
+  font-family: var(--pese-font-body);
+  color: var(--pese-ink);
+
+  &--corner {
+    border-radius: var(--pese-radius-xl) var(--pese-radius-xs) var(--pese-radius-xs) var(--pese-radius-xs);
+  }
+
+  &--plain {
+    background: var(--pese-surface-200);
+    box-shadow: inset 0 0 0 1px var(--pese-line-strong);
+  }
+  &--tint {
+    background: var(--pese-surface-300);
+  }
+  &--deep {
+    background: var(--pese-deep);
+    color: var(--pese-on-deep);
+  }
+}
