@@ -35,7 +35,8 @@
     "build:css": "sass src/styles/index.scss dist/styles.css --no-source-map --style=compressed && node scripts/copy-css.mjs",
     "build": "npm run tokens && npm run build:js && npm run build:css",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "react": ">=18"
