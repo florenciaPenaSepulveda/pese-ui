@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button } from './Button';
+import { Card } from '../Card/Card';
 
 const meta = {
   title: 'Componentes/Botón',
@@ -22,3 +23,13 @@ export const Cargando: Story = { args: { loading: true, children: 'Enviando' } }
 export const Deshabilitado: Story = { args: { disabled: true } };
 export const ComoEnlace: Story = { args: { href: '#niveles', children: 'Ver niveles', variant: 'secondary' } };
 export const Grande: Story = { args: { size: 'lg' } };
+
+/** Sobre azul noche el foco es claro (on-deep). Pulsa Tab para comprobarlo en ambos temas. */
+export const SobreAzulNoche: Story = {
+  args: { variant: 'accent', children: 'Hablemos' },
+  render: (args) => (
+    <Card tone="deep">
+      <Button {...args} />
+    </Card>
+  ),
+};
