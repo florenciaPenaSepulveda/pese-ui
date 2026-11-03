@@ -11,7 +11,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+/** Superficie con borde: el contenedor por defecto. */
 export const Simple: Story = {};
+/** Bloque suave, sin borde, para separar secciones. */
 export const Suave: Story = { args: { tone: 'tint' } };
+/** Fondo azul noche con texto claro, para resaltar un bloque. */
 export const AzulNoche: Story = { args: { tone: 'deep' } };
+/** Sin la esquina superior izquierda grande de la marca. */
 export const SinEsquinaGrande: Story = { args: { bigCorner: false } };

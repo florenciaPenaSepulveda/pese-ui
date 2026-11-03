@@ -13,8 +13,17 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+/** Un icono. Sin `label` es decorativo; con `label` se anuncia a lectores de pantalla. */
 export const Uno: Story = {};
+/** Los cinco iconos disponibles. */
 export const Todos: Story = {
+  parameters: { docs: { source: { code: `import { Icon } from '@pese-cl/ui';
+
+<Icon name="conectar" size={32} />
+<Icon name="inventario" size={32} />
+<Icon name="facturacion" size={32} />
+<Icon name="diagnostico" size={32} />
+<Icon name="soporte" size={32} />` } } },
   render: () => (
     <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
       {NAMES.map((n) => (

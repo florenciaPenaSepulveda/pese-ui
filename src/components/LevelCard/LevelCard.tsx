@@ -4,8 +4,11 @@ import { cx } from '../../utils/cx';
 export type Level = 0 | 1 | 2;
 
 export type LevelCardProps = Omit<HTMLAttributes<HTMLElement>, 'title'> & {
+  /** Nivel de servicio: 0 (diagnóstico gratuito), 1 o 2. Se escribe en el sobretítulo y en la insignia. */
   level: Level;
+  /** Nombre del nivel, por ejemplo «Primer flujo». */
   title: string;
+  /** Frase breve que explica qué incluye el nivel. */
   description?: ReactNode;
   /** Texto del precio. Mientras no esté definido, usa un marcador como «[Precio a definir]». */
   price?: string;
@@ -17,8 +20,18 @@ export type LevelCardProps = Omit<HTMLAttributes<HTMLElement>, 'title'> & {
 };
 
 /**
- * Tarjeta de nivel con hueco: la insignia amarilla encaja en la esquina superior derecha.
- * El nivel también está escrito en el sobretítulo, así que la insignia es decorativa.
+ * Tarjeta de nivel de servicio con la insignia amarilla encajada en la esquina superior derecha.
+ *
+ * **Cuándo usarla:** en la página de niveles y en las secciones que comparan lo que incluye
+ * cada uno. Destaca **una sola** tarjeta por fila con `featured`. El nivel también está escrito
+ * en el sobretítulo, así que la insignia es solo decorativa.
+ *
+ * @example
+ * ```tsx
+ * <LevelCard level={1} title="Primer flujo" description="Un proceso conectado." price="[Precio a definir]" featured>
+ *   <Button variant="accent" href="/diagnostico-gratuito">Pedir diagnóstico</Button>
+ * </LevelCard>
+ * ```
  */
 export function LevelCard({
   level,

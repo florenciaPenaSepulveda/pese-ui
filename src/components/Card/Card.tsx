@@ -13,7 +13,21 @@ export type CardProps = Omit<HTMLAttributes<HTMLElement>, 'children'> & {
   children: ReactNode;
 };
 
-/** Contenedor base. Sin estado ni efectos. */
+/**
+ * Contenedor base para agrupar contenido: un servicio, un caso, un bloque destacado.
+ *
+ * **Cuándo usarla:** cuando varias cosas deben leerse juntas. Usa `tone="deep"` para un
+ * bloque que debe resaltar (texto claro sobre azul noche) y `as="article"` o `as="section"`
+ * cuando el contenido tenga sentido por sí solo.
+ *
+ * @example
+ * ```tsx
+ * <Card as="article" tone="tint">
+ *   <h3>Automatiza tu inventario</h3>
+ *   <p>Conectamos ventas y bodega.</p>
+ * </Card>
+ * ```
+ */
 export function Card({ as, tone = 'plain', bigCorner = true, className, children, ...rest }: CardProps) {
   const Tag: ElementType = as ?? 'div';
   return (

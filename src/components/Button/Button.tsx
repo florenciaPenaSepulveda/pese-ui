@@ -18,7 +18,11 @@ type Common = {
 
 type AsButton = Common &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof Common> & { href?: undefined };
-type AsLink = Common & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof Common> & { href: string };
+type AsLink = Common &
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof Common> & {
+    /** Destino del enlace. Cuando se indica, el botón se pinta como `<a>` en lugar de `<button>`. */
+    href: string;
+  };
 
 export type ButtonProps = AsButton | AsLink;
 
@@ -27,8 +31,20 @@ function Spinner() {
 }
 
 /**
- * Botón de PESE. Sin estado: si recibe `href` se pinta como enlace `<a>`,
- * si no, como `<button type="button">`.
+ * Botón de PESE para las acciones de una página: pedir el diagnóstico, enviar un formulario,
+ * ver los niveles.
+ *
+ * **Cuándo usarlo:** para una acción. Si solo navegas a otra página, pásale `href` y se pinta
+ * como enlace `<a>` con el mismo aspecto (mejor para SEO y accesibilidad). Usa **un solo**
+ * botón `accent` por pieza para guiar la vista hacia la acción principal.
+ *
+ * Es un componente sin estado: `loading` y `disabled` los controla quien lo usa.
+ *
+ * @example
+ * ```tsx
+ * <Button href="/diagnostico-gratuito" size="lg">Pedir diagnóstico</Button>
+ * <Button variant="secondary" type="submit" loading={enviando}>Enviar</Button>
+ * ```
  */
 export function Button(props: ButtonProps) {
   const { variant = 'primary', size = 'md', fullWidth, loading, children, className, ...rest } = props;

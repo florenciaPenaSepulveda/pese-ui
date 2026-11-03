@@ -1,9 +1,11 @@
 import type { ReactElement, SVGAttributes } from 'react';
 import { cx } from '../../utils/cx';
 
+/** Iconos disponibles: conectar (sistemas), inventario, facturación, diagnóstico y soporte. */
 export type IconName = 'conectar' | 'inventario' | 'facturacion' | 'diagnostico' | 'soporte';
 
 export type IconProps = Omit<SVGAttributes<SVGSVGElement>, 'children' | 'viewBox'> & {
+  /** Cuál icono dibujar. */
   name: IconName;
   /** Lado en píxeles. Por defecto 24. */
   size?: number;
@@ -60,7 +62,18 @@ const SHAPES: Record<IconName, { line: ReactElement; dot: [number, number] }> = 
   },
 };
 
-/** Icono de línea de PESE: trazo `ink` y un solo punto de acento. */
+/**
+ * Icono de línea de PESE: trazo del color del texto y un solo punto de acento.
+ *
+ * **Cuándo usarlo:** para reforzar una palabra (un servicio, un paso), no para reemplazarla.
+ * Sin `label` es decorativo y queda oculto para lectores de pantalla; con `label` se anuncia.
+ *
+ * @example
+ * ```tsx
+ * <Icon name="inventario" size={32} />
+ * <Icon name="soporte" label="Soporte" />
+ * ```
+ */
 export function Icon({ name, size = 24, label, className, ...rest }: IconProps) {
   const shape = SHAPES[name];
   const a11y = label ? { role: 'img' as const, 'aria-label': label } : { 'aria-hidden': true as const };

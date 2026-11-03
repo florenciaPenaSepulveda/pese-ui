@@ -16,4 +16,5 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+/** Un paso hecho, uno en curso y uno pendiente. Cada uno dice su estado con una palabra. */
 export const Basico: Story = {};

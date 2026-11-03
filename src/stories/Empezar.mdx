@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Empezar" />
+
+# @pese-cl/ui
+
+Librería de componentes de **PESE** (Peña y Sepúlveda): software que encaja con tu negocio.
+
+Son componentes de React **sin estado y listos para SSR**: sirven en Astro, Next.js o Remix sin enviar JavaScript extra al navegador. Cumplen accesibilidad AAA y cambian solos entre tema claro y oscuro.
+
+## Instalación
+
+```bash
+npm install @pese-cl/ui
+```
+
+## Primer uso
+
+```tsx
+import { Button } from '@pese-cl/ui';
+import '@pese-cl/ui/styles.css';
+
+export default function Page() {
+  return (
+    <div className="pese-root">
+      <Button href="/diagnostico-gratuito">Pedir diagnóstico</Button>
+    </div>
+  );
+}
+```
+
+Envuelve tu app en un contenedor con la clase `pese-root`: le da el fondo, la tipografía y el foco de la marca.
+
+## Cómo leer esta documentación
+
+Cada componente tiene su página con **para qué sirve**, **cuándo usarlo**, la tabla de propiedades y varios casos de uso. Debajo de cada caso, el botón **Show code** muestra el código listo para copiar.
+
+- **Marca:** logo e iconos.
+- **Componentes:** botón, etiqueta y estado, tarjeta, tarjeta de nivel, indicador de niveles y pasos.
+
+Usa el interruptor de tema de la barra superior para ver todo en claro y en oscuro.

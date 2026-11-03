@@ -6,7 +6,9 @@ export type LogoVariant = 'logo' | 'mark' | 'wordmark';
 export type LogoTone = 'auto' | 'ink' | 'white';
 
 export type LogoProps = Omit<SVGAttributes<SVGSVGElement>, 'children' | 'viewBox'> & {
+  /** logo: isotipo y nombre en horizontal; mark: solo el isotipo; wordmark: solo el nombre. */
   variant?: LogoVariant;
+  /** auto: sigue el tema claro u oscuro; ink: una sola tinta; white: para fondos azul noche. */
   tone?: LogoTone;
   /** Texto accesible. Por defecto «PESE». Pasa `null` si el logo es decorativo. */
   title?: string | null;
@@ -35,7 +37,19 @@ const LETTERS = (
   </g>
 );
 
-/** Logo de PESE en SVG en línea. Los colores salen de las variables del tema. */
+/**
+ * Logo de PESE como SVG en línea. Los colores salen de las variables del tema, así que
+ * cambia solo entre claro y oscuro y no carga ninguna imagen.
+ *
+ * **Cuándo usarlo:** en la cabecera y el pie (`logo`), y como icono pequeño (`mark`).
+ * Sobre fondo azul noche usa `tone="white"`. Si el logo está junto al nombre escrito, pasa
+ * `title={null}` para que no se anuncie dos veces.
+ *
+ * @example
+ * ```tsx
+ * <a href="/"><Logo width={160} /></a>
+ * ```
+ */
 export function Logo({ variant = 'logo', tone = 'auto', title = 'PESE', className, ...rest }: LogoProps) {
   const a11y = title ? { role: 'img' as const, 'aria-label': title } : { 'aria-hidden': true as const };
   return (
