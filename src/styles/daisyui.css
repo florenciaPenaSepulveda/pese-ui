@@ -1,0 +1,73 @@
+/* GENERADO por scripts/build-tokens.mjs a partir de tokens/tokens.json. No editar a mano.
+   Tema opcional para daisyUI v5. Uso:
+     @import "tailwindcss";
+     @plugin "daisyui" { themes: false; }
+     @import "pese-ui/daisyui.css";
+   Luego usa data-theme="pese" o "pese-dark". */
+@plugin "daisyui/theme" {
+  name: "pese";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F6F6FB;
+  --color-base-300: #E7E8FF;
+  --color-base-content: #0E0F2E;
+  --color-primary: #3232D8;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #0E0F2E;
+  --color-secondary-content: #F6F6FB;
+  --color-accent: #FFD23F;
+  --color-accent-content: #0E0F2E;
+  --color-neutral: #0E0F2E;
+  --color-neutral-content: #F6F6FB;
+  --color-info: #3232D8;
+  --color-info-content: #FFFFFF;
+  --color-success: #0A4F43;
+  --color-success-content: #D8EFE9;
+  --color-warning: #5E3F00;
+  --color-warning-content: #FCEBC8;
+  --color-error: #861F0D;
+  --color-error-content: #FBE0D8;
+  --radius-selector: 999px;
+  --radius-field: 8px;
+  --radius-box: 12px;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "pese-dark";
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: #13153A;
+  --color-base-200: #0A0B22;
+  --color-base-300: #1C1F57;
+  --color-base-content: #F6F6FB;
+  --color-primary: #9EA2FF;
+  --color-primary-content: #0E0F2E;
+  --color-secondary: #232888;
+  --color-secondary-content: #F6F6FB;
+  --color-accent: #FFD23F;
+  --color-accent-content: #0E0F2E;
+  --color-neutral: #232888;
+  --color-neutral-content: #F6F6FB;
+  --color-info: #9EA2FF;
+  --color-info-content: #0E0F2E;
+  --color-success: #7FE0C8;
+  --color-success-content: #0B3A32;
+  --color-warning: #FFD27A;
+  --color-warning-content: #3D2B00;
+  --color-error: #FFA08A;
+  --color-error-content: #4A160B;
+  --radius-selector: 999px;
+  --radius-field: 8px;
+  --radius-box: 12px;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}
