@@ -30,15 +30,17 @@ import 'pese-ui/styles.css';
 
 export default function Page() {
   return (
-    <>
+    <div className="pese-root">
       <LevelCard level={1} title="Primer flujo" description="Un proceso conectado." featured />
       <Button href="/diagnostico">Pedir diagnóstico</Button>
-    </>
+    </div>
   );
 }
 ```
 
 Sirve igual en Next.js (componentes de servidor), Astro, Remix o `renderToString`. Importa `pese-ui/styles.css` una vez, en el layout.
+
+> **Envuelve tu app (o tus secciones) en un contenedor con la clase `pese-root`.** Le da el fondo, la tipografía y el color de texto del tema, y activa el foco de 3px de la marca en los enlaces sueltos (`a`). Sin ella, los componentes se ven bien, pero los enlaces que escribas tú conservan el foco del navegador.
 
 ### Tema claro y oscuro
 
