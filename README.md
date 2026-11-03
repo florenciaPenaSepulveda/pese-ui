@@ -52,6 +52,8 @@ Por defecto sigue al sistema. Para forzarlo, pon `data-theme="light"` o `data-th
 
 Ahora existen `bg-surface-100`, `text-ink`, `bg-brand`, `rounded-xl`, `font-display`, etc., y cambian solos con el tema.
 
+> **Ojo:** `rounded-xl` pasa a valer el radio de la marca (28 px, la esquina grande), no el de Tailwind por defecto.
+
 ### daisyUI v5 (opcional)
 
 ```css
