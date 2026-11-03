@@ -26,7 +26,7 @@ export const Grande: Story = { args: { size: 'lg' } };
 
 /** Sobre azul noche el foco es claro (on-deep). Pulsa Tab para comprobarlo en ambos temas. */
 export const SobreAzulNoche: Story = {
-  args: { variant: 'accent', children: 'Hablemos' },
+  args: { variant: 'secondary', children: 'Ver niveles' },
   render: (args) => (
     <Card tone="deep">
       <Button {...args} />

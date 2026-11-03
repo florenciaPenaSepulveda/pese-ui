@@ -42,4 +42,11 @@
     outline: 3px solid var(--pese-on-deep);
     outline-offset: 3px;
   }
+
+  // Botón secundario: sobre azul noche el texto y el borde van en on-deep (con ink no se leería).
+  .pese-btn--secondary {
+    color: var(--pese-on-deep);
+    border-color: var(--pese-on-deep);
+    &:hover { border-color: var(--pese-on-deep); }
+  }
 }
