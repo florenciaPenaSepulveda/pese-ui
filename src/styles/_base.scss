@@ -36,4 +36,10 @@
   .pese-btn:focus-visible { // más específico que el foco propio de Button (si no, gana este y no se ve)
     outline-color: var(--pese-on-deep);
   }
+
+  // Enlaces sueltos: contorno de 3px de la marca (no el del navegador), también sobre azul noche.
+  a:focus-visible {
+    outline: 3px solid var(--pese-on-deep);
+    outline-offset: 3px;
+  }
 }
