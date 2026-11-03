@@ -32,7 +32,8 @@
 .pese-on-deep,
 .pese-card--deep,
 .pese-level-card--featured {
-  :focus-visible {
+  :focus-visible,
+  .pese-btn:focus-visible { // más específico que el foco propio de Button (si no, gana este y no se ve)
     outline-color: var(--pese-on-deep);
   }
 }
