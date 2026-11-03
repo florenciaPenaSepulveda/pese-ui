@@ -9,6 +9,8 @@ Librería de componentes de **PESE** (Peña y Sepúlveda): software que encaja c
 - **Accesibilidad AAA:** texto 7:1, gráficos y bordes 3:1, objetivos táctiles de 44 px y foco visible. Un test calcula los contrastes de todos los pares de colores, en claro y en oscuro.
 - **Storybook** con interruptor de tema y revisión de accesibilidad (axe).
 
+Ver Storybook: https://pese-ui.onrender.com/
+
 El diseño completo (logo, color, tipografía, formas) vive en el sistema de diseño de PESE; `tokens/tokens.json` es la copia que alimenta esta librería.
 
 ## Inicio rápido
