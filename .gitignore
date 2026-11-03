@@ -6,3 +6,6 @@ storybook-static/
 .env
 .env.*
 coverage/
+
+# Contexto para Claude Code (local, no se versiona)
+CLAUDE.md
