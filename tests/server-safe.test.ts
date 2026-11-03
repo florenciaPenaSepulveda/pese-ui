@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 function files(dir: string): string[] {
   return readdirSync(dir).flatMap((f) => {
@@ -17,7 +18,7 @@ const FORBIDDEN = [
 ];
 
 test('ningún componente usa estado, efectos ni APIs del navegador (SSR sin estado)', () => {
-  const src = files(new URL('../src', import.meta.url).pathname).filter((f) => /\.tsx?$/.test(f));
+  const src = files(fileURLToPath(new URL('../src', import.meta.url))).filter((f) => /\.tsx?$/.test(f));
   assert.ok(src.length > 0);
   for (const file of src) {
     const text = readFileSync(file, 'utf8');
