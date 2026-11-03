@@ -30,7 +30,10 @@
   "scripts": {
     "tokens": "node scripts/build-tokens.mjs",
     "test": "tsx --test \"tests/*.test.ts\" \"tests/*.test.tsx\"",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:js": "tsup",
+    "build:css": "sass src/styles/index.scss dist/styles.css --no-source-map --style=compressed && node scripts/copy-css.mjs",
+    "build": "npm run tokens && npm run build:js && npm run build:css"
   },
   "peerDependencies": {
     "react": ">=18"
@@ -41,7 +44,9 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tsup": "^8.5.0",
+    "sass": "^1.90.0"
   },
   "engines": {
     "node": ">=20"

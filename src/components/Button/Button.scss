@@ -1,0 +1,96 @@
+.pese-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pese-space-2);
+  min-height: 44px;
+  padding: 0 var(--pese-space-5);
+  border: 2px solid transparent;
+  border-radius: var(--pese-radius-pill);
+  font-family: var(--pese-font-body);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus-visible {
+    outline: 3px solid var(--pese-focus);
+    outline-offset: 3px;
+  }
+
+  &--primary {
+    background: var(--pese-brand);
+    color: var(--pese-on-brand);
+    &:hover { background: var(--pese-brand-strong); }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: var(--pese-ink);
+    border-color: var(--pese-line-strong);
+    &:hover { border-color: var(--pese-ink); }
+  }
+
+  &--accent {
+    background: var(--pese-acento);
+    color: var(--pese-on-acento);
+    &:hover { box-shadow: 0 0 0 2px var(--pese-ink); }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: var(--pese-brand-strong);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  &--lg {
+    min-height: 52px;
+    padding: 0 var(--pese-space-6);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    background: var(--pese-surface-300);
+    color: var(--pese-ink-muted);
+    border-color: var(--pese-line-strong);
+    box-shadow: none;
+    text-decoration: none;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &__spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: pese-spin 1s linear infinite;
+  }
+}
+
+@keyframes pese-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pese-btn__spinner {
+    animation: none;
+    border-top-color: currentColor;
+  }
+}
+
+@media (max-width: 640px) {
+  .pese-btn { width: 100%; }
+}

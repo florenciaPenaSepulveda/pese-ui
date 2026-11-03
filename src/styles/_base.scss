@@ -1,0 +1,38 @@
+// Reglas mínimas para que los componentes se vean bien sin reset global.
+// No toca elementos HTML sueltos: solo ofrece clases opcionales.
+.pese-root {
+  background: var(--pese-surface-100);
+  color: var(--pese-ink);
+  font-family: var(--pese-font-body);
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pese-text-display { font-family: var(--pese-font-display); font-weight: 700; font-size: 56px; line-height: 60px; letter-spacing: -0.03em; }
+.pese-text-h1 { font-family: var(--pese-font-display); font-weight: 700; font-size: 32px; line-height: 38px; letter-spacing: -0.02em; }
+.pese-text-h2 { font-family: var(--pese-font-display); font-weight: 700; font-size: 24px; line-height: 30px; }
+.pese-text-h3 { font-family: var(--pese-font-display); font-weight: 700; font-size: 20px; line-height: 26px; }
+.pese-text-body-lg { font-size: 18px; line-height: 27px; }
+.pese-text-body-sm { font-size: 14px; line-height: 21px; }
+.pese-text-eyebrow {
+  font-family: var(--pese-font-mono);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pese-ink-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pese-root * { transition: none !important; }
+}
+
+// El foco normal (focus) desaparece sobre azul noche en el tema claro: ahí se usa on-deep.
+.pese-on-deep,
+.pese-card--deep,
+.pese-level-card--featured {
+  :focus-visible {
+    outline-color: var(--pese-on-deep);
+  }
+}

@@ -1,0 +1,40 @@
+.pese-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 var(--pese-space-3);
+  border-radius: var(--pese-radius-pill);
+  font-family: var(--pese-font-body);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+
+  &--neutral {
+    background: var(--pese-surface-300);
+    color: var(--pese-ink);
+    border: 1px solid var(--pese-line-strong);
+  }
+  &--brand {
+    background: var(--pese-brand);
+    color: var(--pese-on-brand);
+  }
+  &--accent {
+    background: var(--pese-acento);
+    color: var(--pese-on-acento);
+  }
+}
+
+.pese-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pese-space-2);
+  padding: 2px var(--pese-space-3) 2px var(--pese-space-2);
+  border-radius: var(--pese-radius-pill);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+
+  &--ok { color: var(--pese-ok); background: var(--pese-ok-bg); }
+  &--warn { color: var(--pese-warn); background: var(--pese-warn-bg); }
+  &--danger { color: var(--pese-danger); background: var(--pese-danger-bg); }
+}
