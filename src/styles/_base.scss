@@ -28,6 +28,13 @@
   .pese-root * { transition: none !important; }
 }
 
+// Enlaces sueltos: contorno de 3px con --pese-focus (el de los botones). Va antes del bloque de
+// azul noche para que ese lo sobrescriba con on-deep.
+.pese-root a:focus-visible {
+  outline: 3px solid var(--pese-focus);
+  outline-offset: 3px;
+}
+
 // El foco normal (focus) desaparece sobre azul noche en el tema claro: ahí se usa on-deep.
 .pese-on-deep,
 .pese-card--deep,
