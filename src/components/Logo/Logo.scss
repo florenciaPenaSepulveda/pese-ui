@@ -1,0 +1,22 @@
+.pese-logo {
+  display: block;
+  height: auto;
+
+  &__left { fill: var(--pese-brand); }
+  &__right { fill: var(--pese-ink); }
+  &__dot { fill: var(--pese-acento); }
+  &__letters { stroke: var(--pese-ink); }
+
+  &--ink {
+    .pese-logo__left,
+    .pese-logo__right,
+    .pese-logo__dot { fill: currentColor; }
+    .pese-logo__letters { stroke: currentColor; }
+  }
+
+  &--white {
+    .pese-logo__left,
+    .pese-logo__right { fill: #fff; }
+    .pese-logo__letters { stroke: #fff; }
+  }
+}

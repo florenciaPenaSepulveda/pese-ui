@@ -1,0 +1,12 @@
+.pese-icon {
+  flex: none;
+
+  &__line { stroke: var(--pese-ink); }
+  &__dot { fill: var(--pese-acento); }
+}
+
+// Sobre fondos azul noche el trazo pasa a claro.
+.pese-card--deep .pese-icon__line,
+.pese-level-card--featured .pese-icon__line {
+  stroke: var(--pese-on-deep);
+}

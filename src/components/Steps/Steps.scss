@@ -1,0 +1,70 @@
+.pese-steps {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--pese-font-body);
+
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    column-gap: var(--pese-space-3);
+    align-items: start;
+    padding-bottom: var(--pese-space-4);
+
+    &:last-child { padding-bottom: 0; }
+
+    // Línea que une un paso con el siguiente.
+    &:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 32px;
+      bottom: 0;
+      width: 2px;
+      background: var(--pese-line-strong);
+    }
+  }
+
+  &__marker {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &__item--done &__marker {
+    background: var(--pese-brand);
+    color: var(--pese-on-brand);
+  }
+  &__item--current &__marker {
+    background: var(--pese-acento);
+    color: var(--pese-on-acento);
+    box-shadow: 0 0 0 2px var(--pese-ink);
+  }
+  &__item--todo &__marker {
+    background: var(--pese-surface-200);
+    color: var(--pese-ink-muted);
+    border: 2px solid var(--pese-line-strong);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    min-height: 32px;
+    justify-content: center;
+  }
+  &__title { font-weight: 600; color: var(--pese-ink); }
+  &__status,
+  &__desc {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--pese-ink-muted);
+  }
+}
