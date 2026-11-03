@@ -58,7 +58,7 @@ const tw = [
 out(
   'src/styles/tailwind.css',
   `/* ${HEADER}
-   Uso (Tailwind v4):  @import "tailwindcss";  @import "pese-ui/styles.css";  @import "pese-ui/tailwind.css";
+   Uso (Tailwind v4):  @import "tailwindcss";  @import "@pese-cl/ui/styles.css";  @import "@pese-cl/ui/tailwind.css";
    Después puedes escribir bg-surface-100, text-ink, bg-brand, rounded-xl, font-display, etc. */
 @theme inline {
 ${tw}
@@ -105,7 +105,7 @@ out(
    Tema opcional para daisyUI v5. Uso:
      @import "tailwindcss";
      @plugin "daisyui" { themes: false; }
-     @import "pese-ui/daisyui.css";
+     @import "@pese-cl/ui/daisyui.css";
    Luego usa data-theme="pese" o "pese-dark". */
 @plugin "daisyui/theme" {
   name: "pese";

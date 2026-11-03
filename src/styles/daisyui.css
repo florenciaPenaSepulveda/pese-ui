@@ -2,7 +2,7 @@
    Tema opcional para daisyUI v5. Uso:
      @import "tailwindcss";
      @plugin "daisyui" { themes: false; }
-     @import "pese-ui/daisyui.css";
+     @import "@pese-cl/ui/daisyui.css";
    Luego usa data-theme="pese" o "pese-dark". */
 @plugin "daisyui/theme" {
   name: "pese";

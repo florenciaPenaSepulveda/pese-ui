@@ -1,5 +1,5 @@
 /* GENERADO por scripts/build-tokens.mjs a partir de tokens/tokens.json. No editar a mano.
-   Uso (Tailwind v4):  @import "tailwindcss";  @import "pese-ui/styles.css";  @import "pese-ui/tailwind.css";
+   Uso (Tailwind v4):  @import "tailwindcss";  @import "@pese-cl/ui/styles.css";  @import "@pese-cl/ui/tailwind.css";
    Después puedes escribir bg-surface-100, text-ink, bg-brand, rounded-xl, font-display, etc. */
 @theme inline {
   --color-surface-100: var(--pese-surface-100);
