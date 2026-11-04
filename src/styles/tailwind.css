@@ -1,0 +1,43 @@
+/* GENERADO por scripts/build-tokens.mjs a partir de tokens/tokens.json. No editar a mano.
+   Uso (Tailwind v4):  @import "tailwindcss";  @import "@pese-cl/ui/styles.css";  @import "@pese-cl/ui/tailwind.css";
+   Después puedes escribir bg-surface-100, text-ink, bg-brand, rounded-xl, font-display, etc. */
+@theme inline {
+  --color-surface-100: var(--pese-surface-100);
+  --color-surface-200: var(--pese-surface-200);
+  --color-surface-300: var(--pese-surface-300);
+  --color-ink: var(--pese-ink);
+  --color-ink-muted: var(--pese-ink-muted);
+  --color-line: var(--pese-line);
+  --color-line-strong: var(--pese-line-strong);
+  --color-brand: var(--pese-brand);
+  --color-brand-strong: var(--pese-brand-strong);
+  --color-on-brand: var(--pese-on-brand);
+  --color-deep: var(--pese-deep);
+  --color-on-deep: var(--pese-on-deep);
+  --color-acento: var(--pese-acento);
+  --color-on-acento: var(--pese-on-acento);
+  --color-patron-a: var(--pese-patron-a);
+  --color-patron-b: var(--pese-patron-b);
+  --color-patron-deep-a: var(--pese-patron-deep-a);
+  --color-patron-deep-b: var(--pese-patron-deep-b);
+  --color-patron-brand-a: var(--pese-patron-brand-a);
+  --color-patron-brand-b: var(--pese-patron-brand-b);
+  --color-ok: var(--pese-ok);
+  --color-ok-bg: var(--pese-ok-bg);
+  --color-warn: var(--pese-warn);
+  --color-warn-bg: var(--pese-warn-bg);
+  --color-danger: var(--pese-danger);
+  --color-danger-bg: var(--pese-danger-bg);
+  --color-focus: var(--pese-focus);
+  --font-display: var(--pese-font-display);
+  --font-body: var(--pese-font-body);
+  --font-mono: var(--pese-font-mono);
+  --radius-xs: var(--pese-radius-xs);
+  --radius-sm: var(--pese-radius-sm);
+  --radius-md: var(--pese-radius-md);
+  --radius-lg: var(--pese-radius-lg);
+  --radius-xl: var(--pese-radius-xl);
+  --radius-pill: var(--pese-radius-pill);
+  --shadow-1: var(--pese-shadow-1);
+  --shadow-2: var(--pese-shadow-2);
+}

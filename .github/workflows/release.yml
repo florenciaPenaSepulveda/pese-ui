@@ -1,0 +1,44 @@
+name: Release
+
+# Publica @pese-cl/ui en npm cuando llegan cambios a main, con publicación confiable (OIDC): no se guarda ningún token.
+# Solo corre si la variable del repositorio RELEASE_ENABLED vale "true"
+# (Settings > Secrets and variables > Actions > Variables). Así no se publica
+# nada mientras el historial de main se sube por partes.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: ${{ vars.RELEASE_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - run: npm install --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - name: Publicar con semantic-release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Sin NPM_TOKEN: npm autoriza este flujo con "publicación confiable" (OIDC),
+          # que se configura una vez en npmjs.com para el paquete @pese-cl/ui.

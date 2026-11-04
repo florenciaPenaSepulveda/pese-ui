@@ -1,0 +1,59 @@
+// Reglas mínimas para que los componentes se vean bien sin reset global.
+// No toca elementos HTML sueltos: solo ofrece clases opcionales.
+.pese-root {
+  background: var(--pese-surface-100);
+  color: var(--pese-ink);
+  font-family: var(--pese-font-body);
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pese-text-display { font-family: var(--pese-font-display); font-weight: 700; font-size: 56px; line-height: 60px; letter-spacing: -0.03em; }
+.pese-text-h1 { font-family: var(--pese-font-display); font-weight: 700; font-size: 32px; line-height: 38px; letter-spacing: -0.02em; }
+.pese-text-h2 { font-family: var(--pese-font-display); font-weight: 700; font-size: 24px; line-height: 30px; }
+.pese-text-h3 { font-family: var(--pese-font-display); font-weight: 700; font-size: 20px; line-height: 26px; }
+.pese-text-body-lg { font-size: 18px; line-height: 27px; }
+.pese-text-body-sm { font-size: 14px; line-height: 21px; }
+.pese-text-eyebrow {
+  font-family: var(--pese-font-mono);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pese-ink-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pese-root * { transition: none !important; }
+}
+
+// Enlaces sueltos: contorno de 3px con --pese-focus (el de los botones). Va antes del bloque de
+// azul noche para que ese lo sobrescriba con on-deep.
+.pese-root a:focus-visible {
+  outline: 3px solid var(--pese-focus);
+  outline-offset: 3px;
+}
+
+// El foco normal (focus) desaparece sobre azul noche en el tema claro: ahí se usa on-deep.
+.pese-on-deep,
+.pese-card--deep,
+.pese-level-card--featured {
+  :focus-visible,
+  .pese-btn:focus-visible { // más específico que el foco propio de Button (si no, gana este y no se ve)
+    outline-color: var(--pese-on-deep);
+  }
+
+  // Enlaces sueltos: contorno de 3px de la marca (no el del navegador), también sobre azul noche.
+  a:focus-visible {
+    outline: 3px solid var(--pese-on-deep);
+    outline-offset: 3px;
+  }
+
+  // Botón secundario: sobre azul noche el texto y el borde van en on-deep (con ink no se leería).
+  .pese-btn--secondary {
+    color: var(--pese-on-deep);
+    border-color: var(--pese-on-deep);
+    &:hover { border-color: var(--pese-on-deep); }
+  }
+}

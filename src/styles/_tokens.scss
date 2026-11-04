@@ -1,0 +1,118 @@
+// GENERADO por scripts/build-tokens.mjs a partir de tokens/tokens.json. No editar a mano.
+// Tema claro por defecto; oscuro con prefers-color-scheme o con data-theme="dark".
+// data-theme="light" fuerza el claro aunque el sistema esté en oscuro.
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --pese-surface-100: #F6F6FB;
+  --pese-surface-200: #FFFFFF;
+  --pese-surface-300: #E7E8FF;
+  --pese-ink: #0E0F2E;
+  --pese-ink-muted: #474A6E;
+  --pese-line: #DCDDEE;
+  --pese-line-strong: #7377A6;
+  --pese-brand: #3232D8;
+  --pese-brand-strong: #2A2AC0;
+  --pese-on-brand: #FFFFFF;
+  --pese-deep: #0E0F2E;
+  --pese-on-deep: #F6F6FB;
+  --pese-acento: #FFD23F;
+  --pese-on-acento: #0E0F2E;
+  --pese-patron-a: #E7E8FF;
+  --pese-patron-b: #DCDDF8;
+  --pese-patron-deep-a: #1A1C4C;
+  --pese-patron-deep-b: #23266A;
+  --pese-patron-brand-a: #3D3DE4;
+  --pese-patron-brand-b: #2A2AC0;
+  --pese-ok: #0A4F43;
+  --pese-ok-bg: #D8EFE9;
+  --pese-warn: #5E3F00;
+  --pese-warn-bg: #FCEBC8;
+  --pese-danger: #861F0D;
+  --pese-danger-bg: #FBE0D8;
+  --pese-focus: #0E0F2E;
+  --pese-font-display: "Space Grotesk", system-ui, sans-serif;
+  --pese-font-body: "Instrument Sans", system-ui, sans-serif;
+  --pese-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --pese-space-1: 4px;
+  --pese-space-2: 8px;
+  --pese-space-3: 12px;
+  --pese-space-4: 16px;
+  --pese-space-5: 24px;
+  --pese-space-6: 32px;
+  --pese-space-7: 48px;
+  --pese-space-8: 64px;
+  --pese-space-9: 96px;
+  --pese-radius-xs: 4px;
+  --pese-radius-sm: 8px;
+  --pese-radius-md: 12px;
+  --pese-radius-lg: 20px;
+  --pese-radius-xl: 28px;
+  --pese-radius-pill: 999px;
+  --pese-shadow-1: 0 1px 2px rgba(14,15,46,0.12);
+  --pese-shadow-2: 0 8px 24px rgba(14,15,46,0.16);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --pese-surface-100: #0A0B22;
+    --pese-surface-200: #13153A;
+    --pese-surface-300: #1C1F57;
+    --pese-ink: #F6F6FB;
+    --pese-ink-muted: #B4B7DB;
+    --pese-line: #2C2E5A;
+    --pese-line-strong: #8A8EC4;
+    --pese-brand: #9EA2FF;
+    --pese-brand-strong: #B5B8FF;
+    --pese-on-brand: #0E0F2E;
+    --pese-deep: #232888;
+    --pese-on-deep: #F6F6FB;
+    --pese-acento: #FFD23F;
+    --pese-on-acento: #0E0F2E;
+    --pese-patron-a: #1B1D50;
+    --pese-patron-b: #25286F;
+    --pese-patron-deep-a: #2D33A6;
+    --pese-patron-deep-b: #363CBA;
+    --pese-patron-brand-a: #AEB1FF;
+    --pese-patron-brand-b: #8F93F5;
+    --pese-ok: #7FE0C8;
+    --pese-ok-bg: #0B3A32;
+    --pese-warn: #FFD27A;
+    --pese-warn-bg: #3D2B00;
+    --pese-danger: #FFA08A;
+    --pese-danger-bg: #4A160B;
+    --pese-focus: #F6F6FB;
+  }
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --pese-surface-100: #0A0B22;
+  --pese-surface-200: #13153A;
+  --pese-surface-300: #1C1F57;
+  --pese-ink: #F6F6FB;
+  --pese-ink-muted: #B4B7DB;
+  --pese-line: #2C2E5A;
+  --pese-line-strong: #8A8EC4;
+  --pese-brand: #9EA2FF;
+  --pese-brand-strong: #B5B8FF;
+  --pese-on-brand: #0E0F2E;
+  --pese-deep: #232888;
+  --pese-on-deep: #F6F6FB;
+  --pese-acento: #FFD23F;
+  --pese-on-acento: #0E0F2E;
+  --pese-patron-a: #1B1D50;
+  --pese-patron-b: #25286F;
+  --pese-patron-deep-a: #2D33A6;
+  --pese-patron-deep-b: #363CBA;
+  --pese-patron-brand-a: #AEB1FF;
+  --pese-patron-brand-b: #8F93F5;
+  --pese-ok: #7FE0C8;
+  --pese-ok-bg: #0B3A32;
+  --pese-warn: #FFD27A;
+  --pese-warn-bg: #3D2B00;
+  --pese-danger: #FFA08A;
+  --pese-danger-bg: #4A160B;
+  --pese-focus: #F6F6FB;
+}
