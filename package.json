@@ -1,6 +1,6 @@
 {
   "name": "@pese-cl/ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Librería de componentes React de PESE: SSR sin estado, SCSS, Tailwind v4 y tema daisyUI opcional.",
   "license": "MIT",
   "author": {
