@@ -15,4 +15,8 @@ export { Logo } from './components/Logo/Logo';
 export type { LogoProps, LogoVariant, LogoTone } from './components/Logo/Logo';
 export { Icon } from './components/Icon/Icon';
 export type { IconProps, IconName } from './components/Icon/Icon';
+export { Container } from './components/Container/Container';
+export type { ContainerProps, ContainerSize } from './components/Container/Container';
+export { Layout } from './components/Layout/Layout';
+export type { LayoutProps } from './components/Layout/Layout';
 export * from './tokens';
