@@ -94,8 +94,23 @@ Usa `data-theme="pese"` o `"pese-dark"`. Está generado desde los mismos tokens,
 | `LevelIndicator` | Barra de tres tramos para el nivel del cliente. |
 | `Steps` | Pasos con estado: hecho, en curso, pendiente. |
 | `Logo`, `Icon` | Logo y cinco iconos en SVG, con los colores del tema. |
+| `Layout` | Estructura de página: cabecera, un solo `<main>` con `id` (destino del enlace «Saltar al contenido») y pie siempre abajo. Ya incluye `pese-root`. |
+| `Container` | Centra el contenido y limita su ancho (`narrow` 720 px, `default` 1120 px, `wide` 1280 px). |
 
 El detalle de cada propiedad, con ejemplos y su código, está en [Storybook](https://pese-ui.onrender.com/).
+
+## Fuentes
+
+La marca usa Space Grotesk (titulares), Instrument Sans (texto) y JetBrains Mono (datos). El paquete las trae **autoalojadas**, para no depender de Google Fonts: ahorra una conexión externa, respeta la privacidad de quien visita y evita saltos de diseño. Importa la hoja una sola vez, junto a los estilos:
+
+```css
+@import '@pese-cl/ui/fonts.css';
+@import '@pese-cl/ui/styles.css';
+```
+
+En Astro, Next.js o Vite sirve igual con `import '@pese-cl/ui/fonts.css';`: el empaquetador copia los `.woff2` y reescribe las rutas. Son fuentes variables, con el subconjunto latino (cubre la ñ, las tildes, ¿ y ¡) y `font-display: swap`. Licencia SIL Open Font License 1.1, incluida junto a los archivos.
+
+Para que no haya parpadeo en la primera carga, puedes precargar la fuente de los titulares con un `<link rel="preload" as="font" type="font/woff2" crossorigin>` que apunte al archivo `space-grotesk-latin-wght-normal.woff2`.
 
 ## Tokens
 
