@@ -19,4 +19,6 @@ export { Container } from './components/Container/Container';
 export type { ContainerProps, ContainerSize } from './components/Container/Container';
 export { Layout } from './components/Layout/Layout';
 export type { LayoutProps } from './components/Layout/Layout';
+export { Header } from './components/Header/Header';
+export type { HeaderProps, HeaderLink } from './components/Header/Header';
 export * from './tokens';

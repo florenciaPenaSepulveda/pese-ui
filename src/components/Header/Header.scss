@@ -1,0 +1,143 @@
+.pese-header {
+  position: relative; // el menú desplegado en pantallas chicas se ancla a la cabecera
+  background: var(--pese-surface-100);
+  box-shadow: inset 0 -1px 0 var(--pese-line);
+  font-family: var(--pese-font-body);
+  color: var(--pese-ink);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--pese-space-4);
+    min-height: 72px;
+  }
+
+  &__home {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: inherit;
+    border-radius: var(--pese-radius-sm);
+
+    svg { display: block; height: 40px; width: auto; }
+
+    &:focus-visible {
+      outline: 3px solid var(--pese-focus);
+      outline-offset: 3px;
+    }
+  }
+
+  &__menu { position: static; }
+
+  // Botón «Menú». Sin el triángulo propio de <summary>; el chevron se dibuja con bordes (no es texto).
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--pese-space-2);
+    min-height: 44px;
+    padding: 0 var(--pese-space-4);
+    border: 2px solid var(--pese-line-strong);
+    border-radius: var(--pese-radius-pill);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    &::-webkit-details-marker { display: none; }
+
+    &::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+      transition: transform 0.15s ease;
+    }
+
+    &:hover { border-color: var(--pese-ink); }
+
+    &:focus-visible {
+      outline: 3px solid var(--pese-focus);
+      outline-offset: 3px;
+    }
+  }
+  &__menu[open] > &__toggle::after { transform: translateY(2px) rotate(-135deg); }
+
+  // Lista desplegada bajo la cabecera, a todo el ancho.
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: var(--pese-space-1);
+    margin: 0;
+    padding: var(--pese-space-4);
+    list-style: none;
+    background: var(--pese-surface-200);
+    box-shadow: inset 0 -1px 0 var(--pese-line-strong);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--pese-space-3);
+    border-radius: var(--pese-radius-sm);
+    color: var(--pese-ink);
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+
+    &:hover { background: var(--pese-surface-300); }
+
+    &:focus-visible {
+      outline: 3px solid var(--pese-focus);
+      outline-offset: 3px;
+    }
+
+    // La página actual no depende solo del color: negrita y subrayado.
+    &--current {
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 6px;
+    }
+  }
+
+  &__cta { margin-top: var(--pese-space-2); }
+  &__cta .pese-btn { width: 100%; box-sizing: border-box; }
+
+  // Pantalla grande: los enlaces van en fila y el botón «Menú» desaparece. Solo si el navegador
+  // permite mostrar el contenido de un <details> cerrado (::details-content); si no, se conserva
+  // el menú desplegable en todos los tamaños.
+  @media (min-width: 960px) {
+    @supports selector(details::details-content) {
+      &__menu::details-content { content-visibility: visible; }
+      &__toggle { display: none; }
+
+      &__list {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--pese-space-2);
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      &__cta {
+        margin-top: 0;
+        margin-left: var(--pese-space-3);
+      }
+      &__cta .pese-btn { width: auto; }
+    }
+  }
+}
