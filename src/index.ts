@@ -21,4 +21,6 @@ export { Layout } from './components/Layout/Layout';
 export type { LayoutProps } from './components/Layout/Layout';
 export { Header } from './components/Header/Header';
 export type { HeaderProps, HeaderLink } from './components/Header/Header';
+export { Footer } from './components/Footer/Footer';
+export type { FooterProps, FooterGroup, FooterLink, FooterTone } from './components/Footer/Footer';
 export * from './tokens';
