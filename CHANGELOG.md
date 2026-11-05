@@ -1,5 +1,15 @@
 # Historial de cambios
 
+# [1.1.0](https://github.com/florenciaPenaSepulveda/pese-ui/compare/v1.0.0...v1.1.0) (2026-11-05)
+
+
+### Features
+
+* **footer:** pie de página con columnas de enlaces, contacto y franja legal ([8c574bd](https://github.com/florenciaPenaSepulveda/pese-ui/commit/8c574bdd753ed4de7826bacf7264af8a40cd0dda))
+* **fuentes:** fuentes de la marca autoalojadas y @pese-cl/ui/fonts.css ([b081838](https://github.com/florenciaPenaSepulveda/pese-ui/commit/b0818387a1fd3f80d26ba1ae4d5acecee3b9659a))
+* **header:** cabecera con navegación y menú sin JavaScript ([b9f982e](https://github.com/florenciaPenaSepulveda/pese-ui/commit/b9f982e53747035842c72bce864ad970b59d637a))
+* **layout:** Layout y Container para la estructura de página ([4637f39](https://github.com/florenciaPenaSepulveda/pese-ui/commit/4637f39e6629acf0c4b49d43a96ec9f0273ad22b))
+
 # 1.0.0 (2026-11-04)
 
 
