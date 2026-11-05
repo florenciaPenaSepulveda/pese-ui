@@ -38,7 +38,8 @@
 // El foco normal (focus) desaparece sobre azul noche en el tema claro: ahí se usa on-deep.
 .pese-on-deep,
 .pese-card--deep,
-.pese-level-card--featured {
+.pese-level-card--featured,
+.pese-footer--deep {
   :focus-visible,
   .pese-btn:focus-visible { // más específico que el foco propio de Button (si no, gana este y no se ve)
     outline-color: var(--pese-on-deep);

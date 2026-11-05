@@ -1,0 +1,13 @@
+.pese-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  &__main {
+    flex: 1 0 auto;
+
+    // Recibe el foco por el enlace «Saltar al contenido»; no es un control, así que no se le dibuja contorno.
+    &:focus { outline: none; }
+  }
+}

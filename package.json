@@ -46,6 +46,7 @@
     "./styles.css": "./dist/styles.css",
     "./tailwind.css": "./dist/tailwind.css",
     "./daisyui.css": "./dist/daisyui.css",
+    "./fonts.css": "./dist/fonts.css",
     "./tokens.json": "./tokens/tokens.json",
     "./package.json": "./package.json"
   },
@@ -59,8 +60,11 @@
     "typecheck": "tsc --noEmit",
     "build:js": "tsup",
     "build:css": "sass src/styles/index.scss dist/styles.css --no-source-map --style=compressed && node scripts/copy-css.mjs",
-    "build": "npm run tokens && npm run build:js && npm run build:css",
+    "build:fonts": "node scripts/build-fonts.mjs",
+    "build": "npm run tokens && npm run build:js && npm run build:css && npm run build:fonts",
+    "prestorybook": "npm run build:fonts",
     "storybook": "storybook dev -p 6006",
+    "prebuild-storybook": "npm run build:fonts",
     "build-storybook": "storybook build",
     "prepare": "npm run build"
   },
@@ -68,6 +72,9 @@
     "react": ">=18"
   },
   "devDependencies": {
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
     "@semantic-release/changelog": "^7.0.0",
     "@semantic-release/git": "^11.0.1",
     "@storybook/addon-a11y": "^10.0.0",
