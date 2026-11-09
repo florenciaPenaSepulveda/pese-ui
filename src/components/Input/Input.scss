@@ -1,0 +1,58 @@
+.pese-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pese-space-2);
+  font-family: var(--pese-font-body);
+
+  &__hint {
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--pese-ink-muted);
+  }
+
+  // El mensaje va sobre danger-bg (par con contraste AAA verificado) y empieza con la palabra «Error».
+  &__error {
+    margin: 0;
+    padding: var(--pese-space-2) var(--pese-space-3);
+    border-radius: var(--pese-radius-xs);
+    background: var(--pese-danger-bg);
+    color: var(--pese-danger);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+  }
+  &__error-label { font-weight: 700; }
+
+  &--error .pese-input { border-color: var(--pese-danger); }
+}
+
+.pese-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  padding: var(--pese-space-2) var(--pese-space-4);
+  border: 2px solid var(--pese-line-strong);
+  border-radius: var(--pese-radius-xs);
+  background: var(--pese-surface-200);
+  color: var(--pese-ink);
+  font-family: var(--pese-font-body);
+  font-size: 16px; // 16px evita el zoom automático de iOS al enfocar
+  line-height: 24px;
+
+  &::placeholder { color: var(--pese-ink-muted); opacity: 1; }
+
+  &:hover { border-color: var(--pese-ink); }
+
+  &:focus-visible {
+    outline: 3px solid var(--pese-focus);
+    outline-offset: 2px;
+    border-color: var(--pese-ink);
+  }
+
+  &:disabled {
+    background: var(--pese-surface-300);
+    color: var(--pese-ink-muted);
+    cursor: not-allowed;
+  }
+}

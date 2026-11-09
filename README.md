@@ -98,6 +98,8 @@ Usa `data-theme="pese"` o `"pese-dark"`. Está generado desde los mismos tokens,
 | `Container` | Centra el contenido y limita su ancho (`narrow` 720 px, `default` 1120 px, `wide` 1280 px). |
 | `Header`, `Footer` | Cabecera con menú sin JavaScript y pie con columnas de enlaces, contacto y franja legal. |
 | `Hero` | Bloque principal de la portada: sobretítulo, titular (`h1`), texto, botones e imagen opcional. |
+| `Link` | Enlace subrayado de la marca; `external` abre en pestaña nueva con aviso para lectores de pantalla. |
+| `Label`, `Input` | Etiqueta de campo y campo de texto con etiqueta, ayuda y error ya conectados (`aria-describedby`, `aria-invalid`). |
 
 El detalle de cada propiedad, con ejemplos y su código, está en [Storybook](https://pese-ui.onrender.com/).
 
