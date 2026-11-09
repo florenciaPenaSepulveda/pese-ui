@@ -1,5 +1,12 @@
 # Historial de cambios
 
+# [1.2.0](https://github.com/florenciaPenaSepulveda/pese-ui/compare/v1.1.0...v1.2.0) (2026-11-09)
+
+
+### Features
+
+* **hero:** bloque de portada con titular, texto, acciones e imagen opcional ([b128dd4](https://github.com/florenciaPenaSepulveda/pese-ui/commit/b128dd4d23e599de676a7e4e7b9ea62f177d82e7))
+
 # [1.1.0](https://github.com/florenciaPenaSepulveda/pese-ui/compare/v1.0.0...v1.1.0) (2026-11-05)
 
 
