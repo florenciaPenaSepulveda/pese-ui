@@ -23,4 +23,6 @@ export { Header } from './components/Header/Header';
 export type { HeaderProps, HeaderLink } from './components/Header/Header';
 export { Footer } from './components/Footer/Footer';
 export type { FooterProps, FooterGroup, FooterLink, FooterTone } from './components/Footer/Footer';
+export { Hero } from './components/Hero/Hero';
+export type { HeroProps, HeroTone } from './components/Hero/Hero';
 export * from './tokens';

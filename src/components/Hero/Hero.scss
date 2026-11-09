@@ -1,0 +1,89 @@
+.pese-hero {
+  font-family: var(--pese-font-body);
+
+  &--plain {
+    background: var(--pese-surface-100);
+    color: var(--pese-ink);
+  }
+  &--deep {
+    background: var(--pese-deep);
+    color: var(--pese-on-deep);
+  }
+
+  &__inner {
+    display: grid;
+    gap: var(--pese-space-6);
+    align-items: center;
+    padding-block: var(--pese-space-8);
+
+    @media (min-width: 768px) {
+      padding-block: var(--pese-space-9);
+    }
+  }
+
+  &--has-media &__inner {
+    @media (min-width: 960px) {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: var(--pese-space-7);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--pese-space-4);
+  }
+
+  &__eyebrow {
+    margin: 0;
+    font-family: var(--pese-font-mono);
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  &--plain &__eyebrow { color: var(--pese-ink-muted); }
+
+  &__title {
+    margin: 0;
+    max-width: 18ch;
+    font-family: var(--pese-font-display);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    letter-spacing: -0.02em;
+
+    @media (min-width: 960px) {
+      font-size: 56px;
+      line-height: 60px;
+      letter-spacing: -0.03em;
+    }
+  }
+
+  &__text {
+    max-width: 56ch;
+    font-size: 18px;
+    line-height: 27px;
+
+    p { margin: 0; }
+    p + p { margin-top: var(--pese-space-3); }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pese-space-3);
+    margin-top: var(--pese-space-2);
+  }
+
+  // La imagen lleva la esquina grande de la marca y se ajusta al ancho de su columna.
+  &__media {
+    overflow: hidden;
+    border-radius: var(--pese-radius-xl) var(--pese-radius-xs) var(--pese-radius-xs) var(--pese-radius-xs);
+
+    img,
+    svg,
+    video { display: block; width: 100%; height: auto; }
+  }
+}
