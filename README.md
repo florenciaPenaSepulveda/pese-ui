@@ -97,6 +97,7 @@ Usa `data-theme="pese"` o `"pese-dark"`. Está generado desde los mismos tokens,
 | `Layout` | Estructura de página: cabecera, un solo `<main>` con `id` (destino del enlace «Saltar al contenido») y pie siempre abajo. Ya incluye `pese-root`. |
 | `Container` | Centra el contenido y limita su ancho (`narrow` 720 px, `default` 1120 px, `wide` 1280 px). |
 | `Header`, `Footer` | Cabecera con menú sin JavaScript y pie con columnas de enlaces, contacto y franja legal. |
+| `Hero` | Bloque principal de la portada: sobretítulo, titular (`h1`), texto, botones e imagen opcional. |
 
 El detalle de cada propiedad, con ejemplos y su código, está en [Storybook](https://pese-ui.onrender.com/).
 
