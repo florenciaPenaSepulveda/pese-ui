@@ -1,0 +1,96 @@
+// Casillas y botones de radio (Checkbox y RadioGroup comparten estas reglas).
+.pese-choice {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pese-space-1);
+  font-family: var(--pese-font-body);
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--pese-space-3);
+  }
+
+  &__label {
+    flex: 1;
+    min-width: 0;
+    min-height: 44px;
+    box-sizing: border-box;
+    padding-block: 10px; // con la casilla de 24px, 44px de alto en total
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--pese-ink);
+    cursor: pointer;
+  }
+
+  // La ayuda queda alineada con el texto, no con la casilla.
+  &__hint { margin-left: calc(24px + var(--pese-space-3)); }
+
+  &__input {
+    appearance: none;
+    flex: none;
+    position: relative;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    margin: 10px 0 0; // centra la casilla en la fila de 44px
+    border: 2px solid var(--pese-line-strong);
+    background: var(--pese-surface-200);
+    cursor: pointer;
+
+    &--checkbox { border-radius: var(--pese-radius-xs); }
+    &--radio { border-radius: 50%; }
+
+    &:hover { border-color: var(--pese-ink); }
+
+    &:focus-visible {
+      outline: 3px solid var(--pese-focus);
+      outline-offset: 2px;
+    }
+
+    &:checked {
+      border-color: var(--pese-brand);
+      background: var(--pese-brand);
+    }
+
+    // Marca de verificación dibujada con bordes (color on-brand).
+    &--checkbox:checked::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 1px;
+      width: 6px;
+      height: 12px;
+      border-right: 3px solid var(--pese-on-brand);
+      border-bottom: 3px solid var(--pese-on-brand);
+      transform: rotate(45deg);
+    }
+
+    // El punto del radio: un anillo del color de la superficie dentro del círculo de marca.
+    &--radio:checked { box-shadow: inset 0 0 0 4px var(--pese-surface-200); }
+
+    &:disabled {
+      border-color: var(--pese-line-strong);
+      background: var(--pese-surface-300);
+      cursor: not-allowed;
+    }
+    &:disabled + .pese-choice__label {
+      color: var(--pese-ink-muted);
+      cursor: not-allowed;
+    }
+  }
+
+  &--error &__input:not(:checked) { border-color: var(--pese-danger); }
+}
+
+.pese-radiogroup {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  &__legend {
+    padding: 0;
+    margin-bottom: var(--pese-space-1);
+  }
+}
