@@ -100,6 +100,8 @@ Usa `data-theme="pese"` o `"pese-dark"`. Está generado desde los mismos tokens,
 | `Hero` | Bloque principal de la portada: sobretítulo, titular (`h1`), texto, botones e imagen opcional. |
 | `Link` | Enlace subrayado de la marca; `external` abre en pestaña nueva con aviso para lectores de pantalla. |
 | `Label`, `Input` | Etiqueta de campo y campo de texto con etiqueta, ayuda y error ya conectados (`aria-describedby`, `aria-invalid`). |
+| `Textarea`, `Select` | Texto de varias líneas y lista desplegable nativa, con etiqueta, ayuda y error conectados como `Input`. |
+| `Checkbox`, `RadioGroup` | Casilla (por ejemplo, el consentimiento) y grupo de opciones de elección única con `fieldset` y `legend`. |
 
 El detalle de cada propiedad, con ejemplos y su código, está en [Storybook](https://pese-ui.onrender.com/).
 
