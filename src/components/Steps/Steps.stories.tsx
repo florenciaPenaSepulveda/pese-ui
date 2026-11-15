@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Steps } from './Steps';
 
 const meta = {
-  title: 'Componentes/Pasos',
+  title: 'Moléculas/Pasos',
   component: Steps,
   tags: ['autodocs'],
   args: {

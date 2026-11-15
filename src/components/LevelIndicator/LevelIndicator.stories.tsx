@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { LevelIndicator } from './LevelIndicator';
 
 const meta = {
-  title: 'Componentes/Indicador de niveles',
+  title: 'Átomos/Indicador de niveles',
   component: LevelIndicator,
   tags: ['autodocs'],
   args: { level: 1 },

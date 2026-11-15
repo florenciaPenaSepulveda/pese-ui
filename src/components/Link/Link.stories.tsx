@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Link } from './Link';
 
 const meta = {
-  title: 'Componentes/Link',
+  title: 'Átomos/Enlace',
   component: Link,
   tags: ['autodocs'],
   argTypes: { tone: { control: 'inline-radio', options: ['brand', 'inherit'] } },

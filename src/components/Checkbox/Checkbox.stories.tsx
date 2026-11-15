@@ -3,7 +3,7 @@ import { Checkbox } from './Checkbox';
 import { Link } from '../Link/Link';
 
 const meta = {
-  title: 'Componentes/Checkbox',
+  title: 'Moléculas/Casilla',
   component: Checkbox,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 520, padding: 24 }}><Story /></div>],

@@ -4,26 +4,6 @@
   gap: var(--pese-space-2);
   font-family: var(--pese-font-body);
 
-  &__hint {
-    margin: 0;
-    font-size: 14px;
-    line-height: 21px;
-    color: var(--pese-ink-muted);
-  }
-
-  // El mensaje va sobre danger-bg (par con contraste AAA verificado) y empieza con la palabra «Error».
-  &__error {
-    margin: 0;
-    padding: var(--pese-space-2) var(--pese-space-3);
-    border-radius: var(--pese-radius-xs);
-    background: var(--pese-danger-bg);
-    color: var(--pese-danger);
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 600;
-  }
-  &__error-label { font-weight: 700; }
-
   &--error .pese-input { border-color: var(--pese-danger); }
 }
 

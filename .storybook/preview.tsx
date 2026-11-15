@@ -33,7 +33,7 @@ const preview: Preview = {
     layout: 'fullscreen',
     backgrounds: { disable: true },
     controls: { expanded: true },
-    options: { storySort: { order: ['Empezar', 'Marca', 'Componentes'] } },
+    options: { storySort: { order: ['Empezar', 'Marca', 'Átomos', 'Moléculas', 'Organismos', 'Plantillas'] } },
   },
 };
 

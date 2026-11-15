@@ -9,7 +9,7 @@ const rubros = [
 ];
 
 const meta = {
-  title: 'Componentes/Select',
+  title: 'Moléculas/Lista desplegable',
   component: Select,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 420, padding: 24 }}><Story /></div>],

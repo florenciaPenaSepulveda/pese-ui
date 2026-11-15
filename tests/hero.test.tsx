@@ -12,7 +12,7 @@ test('Hero: es una sección con el titular como h1', () => {
 
 test('Hero: titleAs="h2" cambia el nivel sin cambiar el aspecto', () => {
   const out = html(<Hero title="Título" titleAs="h2" />);
-  assert.match(out, /<h2 class="pese-hero__title">/);
+  assert.match(out, /<h2 class="pese-heading pese-heading--display pese-hero__title">/);
   assert.doesNotMatch(out, /<h1/);
 });
 

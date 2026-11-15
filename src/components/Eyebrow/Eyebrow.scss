@@ -1,0 +1,9 @@
+.pese-eyebrow {
+  margin: 0;
+  font-family: var(--pese-font-mono);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: inherit; // hereda: sobre azul noche queda claro; en fondo claro, lo suaviza el bloque que lo contiene
+}

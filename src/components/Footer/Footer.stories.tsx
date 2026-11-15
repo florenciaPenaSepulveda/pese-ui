@@ -20,7 +20,7 @@ const groups = [
 ];
 
 const meta = {
-  title: 'Componentes/Pie de página',
+  title: 'Organismos/Pie de página',
   component: Footer,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },

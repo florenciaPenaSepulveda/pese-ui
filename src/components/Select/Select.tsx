@@ -1,5 +1,7 @@
 import type { ReactNode, SelectHTMLAttributes } from 'react';
+import { joinIds } from '../../utils/aria';
 import { cx } from '../../utils/cx';
+import { FieldError, FieldHint } from '../FieldMessage/FieldMessage';
 import { Label } from '../Label/Label';
 
 export type SelectOption = {
@@ -61,17 +63,13 @@ export function Select({
 }: SelectProps) {
   const hintId = hint ? `${id}-hint` : undefined;
   const errorId = error ? `${id}-error` : undefined;
-  const describedBy = [hintId, errorId, rest['aria-describedby']].filter(Boolean).join(' ') || undefined;
+  const describedBy = joinIds(hintId, errorId, rest['aria-describedby']);
   return (
     <div className={cx('pese-field', error ? 'pese-field--error' : false, wrapperClassName)}>
       <Label htmlFor={id} required={required} optional={optional}>
         {label}
       </Label>
-      {hint && (
-        <p id={hintId} className="pese-field__hint">
-          {hint}
-        </p>
-      )}
+      {hint && <FieldHint id={hintId}>{hint}</FieldHint>}
       <div className="pese-select">
         <select
           {...rest}
@@ -89,12 +87,7 @@ export function Select({
           ))}
         </select>
       </div>
-      {error && (
-        <p id={errorId} className="pese-field__error">
-          <span className="pese-field__error-label">Error: </span>
-          {error}
-        </p>
-      )}
+      {error && <FieldError id={errorId}>{error}</FieldError>}
     </div>
   );
 }

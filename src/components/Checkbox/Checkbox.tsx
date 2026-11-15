@@ -1,5 +1,7 @@
 import type { InputHTMLAttributes, ReactNode } from 'react';
+import { joinIds } from '../../utils/aria';
 import { cx } from '../../utils/cx';
+import { FieldError, FieldHint } from '../FieldMessage/FieldMessage';
 
 export type CheckboxProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'id' | 'type' | 'size'> & {
   /** `id` de la casilla. Es obligatorio y único en la página. */
@@ -34,7 +36,7 @@ export type CheckboxProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'id' | '
 export function Checkbox({ id, label, hint, error, className, wrapperClassName, ...rest }: CheckboxProps) {
   const hintId = hint ? `${id}-hint` : undefined;
   const errorId = error ? `${id}-error` : undefined;
-  const describedBy = [hintId, errorId, rest['aria-describedby']].filter(Boolean).join(' ') || undefined;
+  const describedBy = joinIds(hintId, errorId, rest['aria-describedby']);
   return (
     <div className={cx('pese-choice', error ? 'pese-choice--error' : false, wrapperClassName)}>
       <div className="pese-choice__row">
@@ -50,17 +52,8 @@ export function Checkbox({ id, label, hint, error, className, wrapperClassName, 
           {label}
         </label>
       </div>
-      {hint && (
-        <p id={hintId} className="pese-field__hint pese-choice__hint">
-          {hint}
-        </p>
-      )}
-      {error && (
-        <p id={errorId} className="pese-field__error">
-          <span className="pese-field__error-label">Error: </span>
-          {error}
-        </p>
-      )}
+      {hint && <FieldHint id={hintId} className="pese-choice__hint">{hint}</FieldHint>}
+      {error && <FieldError id={errorId}>{error}</FieldError>}
     </div>
   );
 }

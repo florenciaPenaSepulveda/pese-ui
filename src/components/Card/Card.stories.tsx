@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Card } from './Card';
 
 const meta = {
-  title: 'Componentes/Tarjeta',
+  title: 'Moléculas/Tarjeta',
   component: Card,
   tags: ['autodocs'],
   args: { children: 'Contenido de la tarjeta' },

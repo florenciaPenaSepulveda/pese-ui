@@ -1,0 +1,27 @@
+.pese-crumbs {
+  font-family: var(--pese-font-body);
+  font-size: 14px;
+  line-height: 21px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 var(--pese-space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item { display: inline-flex; align-items: center; gap: var(--pese-space-2); }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--pese-brand-strong);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  &__current { color: var(--pese-ink-muted); font-weight: 600; }
+  &__sep { color: var(--pese-ink-muted); }
+}

@@ -1,5 +1,7 @@
 import type { ReactNode, TextareaHTMLAttributes } from 'react';
+import { joinIds } from '../../utils/aria';
 import { cx } from '../../utils/cx';
+import { FieldError, FieldHint } from '../FieldMessage/FieldMessage';
 import { Label } from '../Label/Label';
 
 export type TextareaProps = Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'id'> & {
@@ -42,17 +44,13 @@ export function Textarea({
 }: TextareaProps) {
   const hintId = hint ? `${id}-hint` : undefined;
   const errorId = error ? `${id}-error` : undefined;
-  const describedBy = [hintId, errorId, rest['aria-describedby']].filter(Boolean).join(' ') || undefined;
+  const describedBy = joinIds(hintId, errorId, rest['aria-describedby']);
   return (
     <div className={cx('pese-field', error ? 'pese-field--error' : false, wrapperClassName)}>
       <Label htmlFor={id} required={required} optional={optional}>
         {label}
       </Label>
-      {hint && (
-        <p id={hintId} className="pese-field__hint">
-          {hint}
-        </p>
-      )}
+      {hint && <FieldHint id={hintId}>{hint}</FieldHint>}
       <textarea
         {...rest}
         id={id}
@@ -62,12 +60,7 @@ export function Textarea({
         aria-describedby={describedBy}
         className={cx('pese-input', 'pese-textarea', className)}
       />
-      {error && (
-        <p id={errorId} className="pese-field__error">
-          <span className="pese-field__error-label">Error: </span>
-          {error}
-        </p>
-      )}
+      {error && <FieldError id={errorId}>{error}</FieldError>}
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import type { FieldsetHTMLAttributes, ReactNode } from 'react';
+import { joinIds } from '../../utils/aria';
 import { cx } from '../../utils/cx';
+import { FieldError, FieldHint } from '../FieldMessage/FieldMessage';
 
 export type RadioOption = {
   /** Valor que se envía con el formulario. */
@@ -65,7 +67,7 @@ export function RadioGroup({
 }: RadioGroupProps) {
   const hintId = hint ? `${id}-hint` : undefined;
   const errorId = error ? `${id}-error` : undefined;
-  const describedBy = [hintId, errorId, rest['aria-describedby']].filter(Boolean).join(' ') || undefined;
+  const describedBy = joinIds(hintId, errorId, rest['aria-describedby']);
   return (
     <fieldset
       {...rest}
@@ -78,11 +80,7 @@ export function RadioGroup({
         {required && <span className="pese-label__mark"> (obligatorio)</span>}
         {!required && optional && <span className="pese-label__mark"> (opcional)</span>}
       </legend>
-      {hint && (
-        <p id={hintId} className="pese-field__hint">
-          {hint}
-        </p>
-      )}
+      {hint && <FieldHint id={hintId}>{hint}</FieldHint>}
       {options.map((o, i) => {
         const oid = `${id}-${i + 1}`;
         const ohint = o.hint ? `${oid}-hint` : undefined;
@@ -105,20 +103,11 @@ export function RadioGroup({
                 {o.label}
               </label>
             </div>
-            {o.hint && (
-              <p id={ohint} className="pese-field__hint pese-choice__hint">
-                {o.hint}
-              </p>
-            )}
+            {o.hint && <FieldHint id={ohint} className="pese-choice__hint">{o.hint}</FieldHint>}
           </div>
         );
       })}
-      {error && (
-        <p id={errorId} className="pese-field__error">
-          <span className="pese-field__error-label">Error: </span>
-          {error}
-        </p>
-      )}
+      {error && <FieldError id={errorId}>{error}</FieldError>}
     </fieldset>
   );
 }

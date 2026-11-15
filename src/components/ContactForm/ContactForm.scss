@@ -1,0 +1,16 @@
+.pese-form {
+  display: grid;
+  gap: var(--pese-space-5);
+  font-family: var(--pese-font-body);
+
+  // Fuera de pantalla (no display:none, que los bots saltan).
+  &__trap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  &__actions { display: flex; flex-wrap: wrap; gap: var(--pese-space-3); }
+}

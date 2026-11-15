@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Textarea } from './Textarea';
 
 const meta = {
-  title: 'Componentes/Textarea',
+  title: 'Moléculas/Área de texto',
   component: Textarea,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 520, padding: 24 }}><Story /></div>],

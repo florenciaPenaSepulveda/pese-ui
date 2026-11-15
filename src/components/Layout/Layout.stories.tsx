@@ -4,7 +4,7 @@ import { Container } from '../Container/Container';
 import { Card } from '../Card/Card';
 
 const meta = {
-  title: 'Componentes/Estructura de página',
+  title: 'Plantillas/Estructura de página',
   component: Layout,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },

@@ -4,7 +4,7 @@ import { Button } from '../Button/Button';
 import { Logo } from '../Logo/Logo';
 
 const meta = {
-  title: 'Componentes/Hero',
+  title: 'Organismos/Portada (Hero)',
   component: Hero,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },

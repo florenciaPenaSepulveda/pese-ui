@@ -8,7 +8,7 @@ const canales = [
 ];
 
 const meta = {
-  title: 'Componentes/RadioGroup',
+  title: 'Moléculas/Opciones (radio)',
   component: RadioGroup,
   tags: ['autodocs'],
   decorators: [(Story) => <div style={{ maxWidth: 520, padding: 24 }}><Story /></div>],

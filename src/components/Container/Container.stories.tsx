@@ -3,7 +3,7 @@ import { Container } from './Container';
 import { Card } from '../Card/Card';
 
 const meta = {
-  title: 'Componentes/Contenedor',
+  title: 'Plantillas/Contenedor',
   component: Container,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },

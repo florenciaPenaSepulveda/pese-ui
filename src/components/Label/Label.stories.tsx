@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Label } from './Label';
 
 const meta = {
-  title: 'Componentes/Label',
+  title: 'Átomos/Etiqueta de campo',
   component: Label,
   tags: ['autodocs'],
   args: { htmlFor: 'correo', children: 'Correo' },

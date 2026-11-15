@@ -3,7 +3,7 @@ import { Button } from './Button';
 import { Card } from '../Card/Card';
 
 const meta = {
-  title: 'Componentes/Botón',
+  title: 'Átomos/Botón',
   component: Button,
   tags: ['autodocs'],
   args: { children: 'Pedir diagnóstico' },
