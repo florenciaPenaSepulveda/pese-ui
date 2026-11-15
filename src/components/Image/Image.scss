@@ -1,0 +1,23 @@
+.pese-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--pese-radius-xl) var(--pese-radius-xs) var(--pese-radius-xs) var(--pese-radius-xs);
+  background: var(--pese-surface-300); // se ve mientras carga
+
+  &--r-16-9 { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  &--r-4-3 { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  &--r-1-1 { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+}
+
+.pese-figure {
+  margin: 0;
+
+  &__caption {
+    margin-top: var(--pese-space-2);
+    font-family: var(--pese-font-body);
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--pese-ink-muted);
+  }
+}

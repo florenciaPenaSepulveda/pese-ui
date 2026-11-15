@@ -3,7 +3,7 @@ import { LevelCard } from './LevelCard';
 import { Button } from '../Button/Button';
 
 const meta = {
-  title: 'Componentes/Tarjeta de nivel',
+  title: 'Moléculas/Tarjeta de nivel',
   component: LevelCard,
   tags: ['autodocs'],
   args: {

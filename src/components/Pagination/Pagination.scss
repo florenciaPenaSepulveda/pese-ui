@@ -1,0 +1,31 @@
+.pese-pagination {
+  font-family: var(--pese-font-body);
+
+  &__list { display: flex; flex-wrap: wrap; align-items: center; gap: var(--pese-space-2); margin: 0; padding: 0; list-style: none; }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 var(--pese-space-3);
+    border: 2px solid transparent;
+    border-radius: var(--pese-radius-pill);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--pese-brand-strong);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover { border-color: var(--pese-line-strong); }
+
+    &--edge { padding: 0 var(--pese-space-4); }
+    &--current { border-color: var(--pese-ink); color: var(--pese-ink); text-decoration: none; }
+    &--off { color: var(--pese-ink-muted); text-decoration: none; border-color: transparent; cursor: not-allowed; }
+  }
+
+  &__gap { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--pese-space-1); color: var(--pese-ink-muted); }
+}

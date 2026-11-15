@@ -1,0 +1,23 @@
+.pese-cta {
+  font-family: var(--pese-font-body);
+
+  &--deep { background: var(--pese-deep); color: var(--pese-on-deep); }
+  &--tint { background: var(--pese-surface-300); color: var(--pese-ink); }
+
+  &__inner {
+    display: grid;
+    gap: var(--pese-space-5);
+    align-items: center;
+    padding-block: var(--pese-space-7);
+
+    @media (min-width: 960px) {
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: var(--pese-space-7);
+      padding-block: var(--pese-space-8);
+    }
+  }
+
+  &__content { display: grid; gap: var(--pese-space-3); }
+  &__text { max-width: 56ch; font-size: 18px; line-height: 27px; p { margin: 0; } }
+  &__actions { display: flex; flex-wrap: wrap; gap: var(--pese-space-3); }
+}

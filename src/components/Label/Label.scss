@@ -1,0 +1,13 @@
+.pese-label {
+  display: block;
+  font-family: var(--pese-font-body);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--pese-ink);
+
+  &__mark {
+    font-weight: 400;
+    color: var(--pese-ink-muted);
+  }
+}

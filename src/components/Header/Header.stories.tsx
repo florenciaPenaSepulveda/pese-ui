@@ -9,7 +9,7 @@ const links = [
 ];
 
 const meta = {
-  title: 'Componentes/Cabecera',
+  title: 'Organismos/Cabecera',
   component: Header,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },

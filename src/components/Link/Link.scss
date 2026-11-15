@@ -1,0 +1,21 @@
+.pese-link {
+  font-family: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+
+  &--brand { color: var(--pese-brand-strong); }
+  &--inherit { color: inherit; }
+
+  &:hover { text-decoration-thickness: 2px; }
+
+  // Aviso solo para lector de pantalla.
+  &__ext {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

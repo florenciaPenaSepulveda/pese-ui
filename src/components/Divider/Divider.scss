@@ -1,0 +1,8 @@
+.pese-divider {
+  height: 0;
+  margin: var(--pese-space-6) 0;
+  border: 0;
+  border-top: 1px solid var(--pese-line);
+
+  &--strong { border-top-color: var(--pese-line-strong); }
+}

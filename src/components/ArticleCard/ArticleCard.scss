@@ -1,0 +1,28 @@
+.pese-article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--pese-line);
+  border-radius: var(--pese-radius-xl) var(--pese-radius-xs) var(--pese-radius-xs) var(--pese-radius-xs);
+  background: var(--pese-surface-200);
+  color: var(--pese-ink);
+  font-family: var(--pese-font-body);
+
+  &__media img { display: block; width: 100%; height: auto; border-radius: 0; }
+
+  &__body { display: flex; flex-direction: column; align-items: flex-start; gap: var(--pese-space-3); padding: var(--pese-space-5); }
+
+  // Un solo enlace; su ::after cubre toda la tarjeta para que sea clicable entera.
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    &::after { content: ''; position: absolute; inset: 0; }
+    &:hover { text-decoration: underline; text-underline-offset: 4px; }
+    &:focus-visible { outline: none; }
+    &:focus-visible::after { outline: 3px solid var(--pese-focus); outline-offset: -3px; border-radius: inherit; }
+  }
+
+  &__excerpt { margin: 0; font-size: 16px; line-height: 24px; }
+  &__meta { margin: 0; font-size: 14px; line-height: 21px; color: var(--pese-ink-muted); }
+}

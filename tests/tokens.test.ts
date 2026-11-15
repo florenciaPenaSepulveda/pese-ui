@@ -25,6 +25,8 @@ const TEXT: Pair[] = [
   ['ink', 'surface-100', 7], ['ink', 'surface-200', 7], ['ink', 'surface-300', 7],
   ['ink-muted', 'surface-100', 7], ['ink-muted', 'surface-200', 7], ['ink-muted', 'surface-300', 7],
   ['brand-strong', 'surface-200', 7],
+  ['brand-strong', 'surface-100', 7], ['brand-strong', 'surface-300', 7],
+  ['danger', 'surface-100', 7], ['danger', 'surface-200', 7],
   ['on-brand', 'brand', 7], ['on-deep', 'deep', 7], ['on-acento', 'acento', 7],
   ['acento', 'deep', 7],
   ['ok', 'ok-bg', 7], ['warn', 'warn-bg', 7], ['danger', 'danger-bg', 7],

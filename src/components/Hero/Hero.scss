@@ -35,31 +35,10 @@
     gap: var(--pese-space-4);
   }
 
-  &__eyebrow {
-    margin: 0;
-    font-family: var(--pese-font-mono);
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
   &--plain &__eyebrow { color: var(--pese-ink-muted); }
 
-  &__title {
-    margin: 0;
-    max-width: 18ch;
-    font-family: var(--pese-font-display);
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 46px;
-    letter-spacing: -0.02em;
-
-    @media (min-width: 960px) {
-      font-size: 56px;
-      line-height: 60px;
-      letter-spacing: -0.03em;
-    }
-  }
+  // El tamaño y la fuente vienen de Heading (display); aquí solo el ancho de línea.
+  &__title { max-width: 18ch; }
 
   &__text {
     max-width: 56ch;

@@ -1,0 +1,21 @@
+.pese-levels-table {
+  overflow-x: auto;
+  font-family: var(--pese-font-body);
+  color: var(--pese-ink);
+
+  &:focus-visible { outline: 3px solid var(--pese-focus); outline-offset: 3px; }
+
+  &__table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 16px; line-height: 24px; text-align: left; }
+
+  &__caption { padding-bottom: var(--pese-space-3); font-family: var(--pese-font-display); font-size: 20px; line-height: 26px; font-weight: 700; text-align: left; }
+
+  th, td { padding: var(--pese-space-3) var(--pese-space-4); border-bottom: 1px solid var(--pese-line); vertical-align: top; }
+
+  &__head, &__feature-head { border-bottom: 2px solid var(--pese-line-strong); font-family: var(--pese-font-display); font-weight: 700; }
+  &__head a { color: var(--pese-brand-strong); text-underline-offset: 3px; }
+  &__desc { display: block; margin-top: var(--pese-space-1); font-family: var(--pese-font-body); font-size: 14px; line-height: 21px; font-weight: 400; color: var(--pese-ink-muted); }
+
+  &__feature { font-weight: 600; }
+  &__yes { font-weight: 600; }
+  &__no { color: var(--pese-ink-muted); }
+}

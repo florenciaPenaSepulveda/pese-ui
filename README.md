@@ -85,6 +85,9 @@ Usa `data-theme="pese"` o `"pese-dark"`. Está generado desde los mismos tokens,
 
 ## Componentes
 
+La librería sigue el diseño atómico: los **átomos** (`Button`, `Badge`, `Status`, `Icon`, `Logo`, `LevelIndicator`, `Link`, `Label`, `Heading`, `Text`, `Eyebrow`, `Image`, `Divider`, `Spinner`, `FieldHint`, `FieldError`) se combinan en **moléculas** (`Input`, `Textarea`, `Select`, `Checkbox`, `RadioGroup`, `Notice`, `Breadcrumbs`, `Pagination`, `Card`, `LevelCard`, `Steps`, `ArticleCard`, `Faq`), estas en **organismos** (`Header`, `Footer`, `Hero`, `CtaBand`, `ContactForm`, `LevelsTable`) y todo se ordena con las **plantillas** (`Container`, `Layout`). Storybook usa la misma organización.
+
+
 | Componente | Para qué sirve |
 | --- | --- |
 | `Button` | Acciones: primario, secundario, acento y texto; se pinta como `<a>` si recibe `href`. |
@@ -97,7 +100,23 @@ Usa `data-theme="pese"` o `"pese-dark"`. Está generado desde los mismos tokens,
 | `Layout` | Estructura de página: cabecera, un solo `<main>` con `id` (destino del enlace «Saltar al contenido») y pie siempre abajo. Ya incluye `pese-root`. |
 | `Container` | Centra el contenido y limita su ancho (`narrow` 720 px, `default` 1120 px, `wide` 1280 px). |
 | `Header`, `Footer` | Cabecera con menú sin JavaScript y pie con columnas de enlaces, contacto y franja legal. |
+| `Eyebrow` | Sobretítulo corto en tipografía de datos, sobre un título. |
+| `FieldHint`, `FieldError` | Ayuda y error de campo; el error empieza con la palabra «Error». |
 | `Hero` | Bloque principal de la portada: sobretítulo, titular (`h1`), texto, botones e imagen opcional. |
+| `Link` | Enlace subrayado de la marca; `external` abre en pestaña nueva con aviso para lectores de pantalla. |
+| `Label`, `Input` | Etiqueta de campo y campo de texto con etiqueta, ayuda y error ya conectados (`aria-describedby`, `aria-invalid`). |
+| `Textarea`, `Select` | Texto de varias líneas y lista desplegable nativa, con etiqueta, ayuda y error conectados como `Input`. |
+| `Checkbox`, `RadioGroup` | Casilla (por ejemplo, el consentimiento) y grupo de opciones de elección única con `fieldset` y `legend`. |
+| `Heading`, `Text` | Título (nivel y tamaño separados) y párrafo con los tamaños de la marca. |
+| `Image`, `Divider`, `Spinner` | Imagen con tamaño reservado y carga diferida, separador, e indicador de carga que respeta «reducir movimiento». |
+| `Notice` | Aviso con la palabra del tipo (información, listo, atención, error). |
+| `CtaBand` | Banda de cierre con título y botones, en azul noche o fondo suave. |
+| `Breadcrumbs` | Migas de pan accesibles; la página actual lleva `aria-current`. |
+| `Faq` | Preguntas frecuentes con `details`/`summary` (sin JavaScript) y datos `FAQPage` opcionales. |
+| `JsonLd`, `faqPageJsonLd`, `breadcrumbListJsonLd` | Datos estructurados para buscadores (schema.org). |
+| `ContactForm` | Formulario de contacto completo (sin JavaScript): errores con resumen enlazado, aviso de envío, consentimiento y campo trampa contra bots. |
+| `ArticleCard`, `Pagination` | Tarjeta de artículo (un solo enlace) y paginación con enlaces normales. |
+| `LevelsTable` | Tabla que compara qué incluye cada nivel, con palabras además de símbolos. |
 
 El detalle de cada propiedad, con ejemplos y su código, está en [Storybook](https://pese-ui.onrender.com/).
 
