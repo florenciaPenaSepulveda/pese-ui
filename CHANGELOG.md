@@ -1,5 +1,14 @@
 # Historial de cambios
 
+# [1.3.0](https://github.com/florenciaPenaSepulveda/pese-ui/compare/v1.2.0...v1.3.0) (2026-11-15)
+
+
+### Features
+
+* **forms:** Link, Label e Input con ayuda y error ([7c0fe20](https://github.com/florenciaPenaSepulveda/pese-ui/commit/7c0fe20c57685d36577f0c60dbcb0ea7601e0042))
+* **forms:** Textarea, Select, Checkbox y RadioGroup ([052d315](https://github.com/florenciaPenaSepulveda/pese-ui/commit/052d31508605d238b950a1346c0f53cadd2249ee))
+* Heading, Text, Image, Divider, Spinner, Notice, CtaBand, Breadcrumbs, Faq, ContactForm, ArticleCard, Pagination, LevelsTable, Eyebrow, FieldHint y FieldError, con Storybook organizado en diseño atómico ([97392bf](https://github.com/florenciaPenaSepulveda/pese-ui/commit/97392bf1fa68c80895f732ac377b12523af8f7d4))
+
 # [1.2.0](https://github.com/florenciaPenaSepulveda/pese-ui/compare/v1.1.0...v1.2.0) (2026-11-09)
 
 
