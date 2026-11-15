@@ -1,0 +1,18 @@
+.pese-heading {
+  margin: 0;
+  font-family: var(--pese-font-display);
+  font-weight: 700;
+  color: inherit; // hereda: sirve también sobre azul noche
+
+  &--display { font-size: 40px; line-height: 46px; letter-spacing: -0.02em; }
+  &--xl { font-size: 32px; line-height: 38px; letter-spacing: -0.02em; }
+  &--lg { font-size: 24px; line-height: 30px; }
+  &--md { font-size: 20px; line-height: 26px; }
+  &--sm { font-size: 18px; line-height: 24px; }
+
+  @media (min-width: 960px) {
+    &--display { font-size: 56px; line-height: 60px; letter-spacing: -0.03em; }
+    &--xl { font-size: 40px; line-height: 46px; }
+    &--lg { font-size: 28px; line-height: 34px; }
+  }
+}

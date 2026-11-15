@@ -1,0 +1,11 @@
+.pese-text {
+  margin: 0;
+  font-family: var(--pese-font-body);
+  color: inherit; // hereda: sirve también sobre azul noche
+
+  &--lg { font-size: 18px; line-height: 27px; }
+  &--md { font-size: 16px; line-height: 24px; }
+  &--sm { font-size: 14px; line-height: 21px; }
+  &--muted { color: var(--pese-ink-muted); }
+  &--measure { max-width: 65ch; }
+}

@@ -6,13 +6,13 @@ import { html } from './helpers';
 test('Hero: es una sección con el titular como h1', () => {
   const out = html(<Hero title="Software que encaja con tu negocio" />);
   assert.match(out, /^<section /);
-  assert.match(out, /<h1 class="pese-hero__title">Software que encaja con tu negocio<\/h1>/);
+  assert.match(out, /<h1 class="pese-heading pese-heading--display pese-hero__title">Software que encaja con tu negocio<\/h1>/);
   assert.equal((out.match(/<h1/g) ?? []).length, 1);
 });
 
 test('Hero: titleAs="h2" cambia el nivel sin cambiar el aspecto', () => {
   const out = html(<Hero title="Título" titleAs="h2" />);
-  assert.match(out, /<h2 class="pese-hero__title">/);
+  assert.match(out, /<h2 class="pese-heading pese-heading--display pese-hero__title">/);
   assert.doesNotMatch(out, /<h1/);
 });
 
@@ -24,7 +24,7 @@ test('Hero: sobretítulo, texto y acciones son opcionales', () => {
       Texto de apoyo
     </Hero>,
   );
-  assert.match(completo, /<p class="pese-hero__eyebrow">Sobre<\/p>/);
+  assert.match(completo, /<p class="pese-eyebrow pese-hero__eyebrow">Sobre<\/p>/);
   assert.match(completo, /<div class="pese-hero__text">Texto de apoyo<\/div>/);
   assert.match(completo, /<div class="pese-hero__actions"><a href="\/x">Ir<\/a><\/div>/);
 });

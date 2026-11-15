@@ -1,6 +1,8 @@
-import type { ElementType, HTMLAttributes, ReactNode } from 'react';
+import type { HTMLAttributes, ReactNode } from 'react';
 import { cx } from '../../utils/cx';
 import { Container } from '../Container/Container';
+import { Eyebrow } from '../Eyebrow/Eyebrow';
+import { Heading } from '../Heading/Heading';
 
 export type HeroTone = 'plain' | 'deep';
 
@@ -60,13 +62,14 @@ export function Hero({
   children,
   ...rest
 }: HeroProps) {
-  const Title: ElementType = titleAs;
   return (
     <section {...rest} className={cx('pese-hero', `pese-hero--${tone}`, media ? 'pese-hero--has-media' : false, className)}>
       <Container size="wide" className="pese-hero__inner">
         <div className="pese-hero__content">
-          {eyebrow && <p className="pese-hero__eyebrow">{eyebrow}</p>}
-          <Title className="pese-hero__title">{title}</Title>
+          {eyebrow && <Eyebrow className="pese-hero__eyebrow">{eyebrow}</Eyebrow>}
+          <Heading level={titleAs === 'h2' ? 2 : 1} size="display" className="pese-hero__title">
+            {title}
+          </Heading>
           {children && <div className="pese-hero__text">{children}</div>}
           {actions && <div className="pese-hero__actions">{actions}</div>}
         </div>

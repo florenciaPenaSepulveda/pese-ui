@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Input } from './Input';
 
 const meta = {
-  title: 'Componentes/Input',
+  title: 'Moléculas/Campo de texto',
   component: Input,
   tags: ['autodocs'],
   argTypes: {

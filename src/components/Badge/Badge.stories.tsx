@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Badge, Status } from './Badge';
 
 const meta = {
-  title: 'Componentes/Etiqueta y estado',
+  title: 'Átomos/Etiqueta y estado',
   component: Badge,
   tags: ['autodocs'],
   args: { children: 'Nuevo' },

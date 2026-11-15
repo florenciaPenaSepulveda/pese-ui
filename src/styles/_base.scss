@@ -40,7 +40,8 @@
 .pese-card--deep,
 .pese-level-card--featured,
 .pese-footer--deep,
-.pese-hero--deep {
+.pese-hero--deep,
+.pese-cta--deep {
   :focus-visible,
   .pese-btn:focus-visible { // más específico que el foco propio de Button (si no, gana este y no se ve)
     outline-color: var(--pese-on-deep);
@@ -58,4 +59,12 @@
     border-color: var(--pese-on-deep);
     &:hover { border-color: var(--pese-on-deep); }
   }
+}
+
+// Modo de contraste forzado de Windows: los colores de la marca se reemplazan por los del sistema,
+// así que lo que dependía de un fondo de color necesita un borde o un color de sistema.
+@media (forced-colors: active) {
+  .pese-choice__input:checked { background: Highlight; border-color: Highlight; }
+  .pese-notice { border: 1px solid CanvasText; }
+  .pese-spinner__ring { border-color: GrayText; border-top-color: CanvasText; }
 }

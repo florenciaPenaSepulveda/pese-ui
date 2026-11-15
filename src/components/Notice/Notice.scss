@@ -1,0 +1,21 @@
+.pese-notice {
+  box-sizing: border-box;
+  padding: var(--pese-space-4) var(--pese-space-5);
+  border-left: 4px solid currentColor;
+  border-radius: var(--pese-radius-xs);
+  font-family: var(--pese-font-body);
+  font-size: 16px;
+  line-height: 24px;
+
+  &--info { background: var(--pese-surface-300); color: var(--pese-ink); border-left-color: var(--pese-brand); }
+  &--ok { background: var(--pese-ok-bg); color: var(--pese-ok); }
+  &--warn { background: var(--pese-warn-bg); color: var(--pese-warn); }
+  &--danger { background: var(--pese-danger-bg); color: var(--pese-danger); }
+
+  &__title { margin: 0; font-weight: 700; }
+  &__body { margin-top: var(--pese-space-1); }
+  &__body > :first-child { margin-top: 0; }
+  &__body > :last-child { margin-bottom: 0; }
+  &__body ul, &__body ol { margin: var(--pese-space-2) 0 0; padding-left: var(--pese-space-5); }
+  &__body a { color: inherit; }
+}
