@@ -36,3 +36,9 @@ export const SobreAzulNoche: Story = {
     </div>
   ),
 };
+
+/** Con una segunda línea bajo el nombre. Se anuncia como «PESE Software». */
+export const ConSubtitulo: Story = {
+  args: { subtitle: 'Software', width: 240 },
+  parameters: { docs: { source: { code: '<Logo width={240} subtitle="Software" />' } } },
+};

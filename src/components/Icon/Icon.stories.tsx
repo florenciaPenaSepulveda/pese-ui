@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Icon, type IconName } from './Icon';
 
-const NAMES: IconName[] = ['conectar', 'inventario', 'facturacion', 'diagnostico', 'soporte'];
+const NAMES: IconName[] = ['conectar', 'inventario', 'facturacion', 'diagnostico', 'soporte', 'instagram', 'linkedin'];
 
 const meta = {
   title: 'Marca/Iconos',
@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 /** Un icono. Sin `label` es decorativo; con `label` se anuncia a lectores de pantalla. */
 export const Uno: Story = {};
-/** Los cinco iconos disponibles. */
+/** Los siete iconos disponibles. */
 export const Todos: Story = {
   parameters: { docs: { source: { code: `import { Icon } from '@pese-cl/ui';
 
@@ -23,7 +23,9 @@ export const Todos: Story = {
 <Icon name="inventario" size={32} />
 <Icon name="facturacion" size={32} />
 <Icon name="diagnostico" size={32} />
-<Icon name="soporte" size={32} />` } } },
+<Icon name="soporte" size={32} />
+<Icon name="instagram" size={32} />
+<Icon name="linkedin" size={32} />` } } },
   render: () => (
     <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
       {NAMES.map((n) => (

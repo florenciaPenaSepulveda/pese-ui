@@ -57,3 +57,16 @@ export const Minimo: Story = {
 
 /** Con otro nombre de navegación, útil si la página tiene más de una `nav`. */
 export const ConNombreDeNavegacion: Story = { args: { navLabel: 'Enlaces del sitio' } };
+
+/** Redes sociales: iconos con enlace bajo el logo. Cada una lleva su nombre accesible. */
+export const ConRedes: Story = {
+  args: {
+    social: [
+      { label: 'Instagram de PESE', href: 'https://www.instagram.com/', icon: 'instagram' },
+      { label: 'LinkedIn de PESE', href: 'https://www.linkedin.com/', icon: 'linkedin' },
+    ],
+  },
+};
+
+/** Las redes sobre el fondo azul noche. */
+export const ConRedesAzulNoche: Story = { args: { ...ConRedes.args, tone: 'deep' } };

@@ -47,3 +47,31 @@ export const EnvioFallido: Story = {
 
 /** `loading` deja el botón cargando mientras el servidor responde. */
 export const Enviando: Story = { args: { loading: true, submitLabel: 'Enviando…' } };
+
+/**
+ * Campos a medida: `fields` elige y ordena (mezcla los de la librería con propios), `hiddenFields`
+ * agrega datos ocultos y `consent` cambia el valor y el texto del consentimiento.
+ */
+export const Configurado: Story = {
+  args: {
+    rubros: undefined,
+    labels: { nombre: 'Tu nombre' },
+    fields: ['nombre', 'correo', { name: 'negocio', label: 'Nombre de tu negocio', autoComplete: 'organization' }, 'mensaje', 'consentimiento'],
+    hiddenFields: { origen: 'portada' },
+    consent: { value: 'si' },
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: `<ContactForm
+  action="/api/contacto"
+  privacyHref="/privacidad"
+  labels={{ nombre: 'Tu nombre' }}
+  fields={['nombre', 'correo', { name: 'negocio', label: 'Nombre de tu negocio', autoComplete: 'organization' }, 'mensaje', 'consentimiento']}
+  hiddenFields={{ origen: 'portada' }}
+  consent={{ value: 'si' }}
+/>`,
+      },
+    },
+  },
+};
