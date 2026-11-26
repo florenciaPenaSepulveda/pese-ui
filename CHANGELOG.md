@@ -1,5 +1,12 @@
 # Historial de cambios
 
+# [1.4.0](https://github.com/florenciaPenaSepulveda/pese-ui/compare/v1.3.0...v1.4.0) (2026-11-26)
+
+
+### Features
+
+* ContactForm configurable, iconos de Instagram y LinkedIn, redes en el pie y subtítulo del logo ([65b06bf](https://github.com/florenciaPenaSepulveda/pese-ui/commit/65b06bf05f8a96f8985c34147ab1867b6b77dfb5))
+
 # [1.3.0](https://github.com/florenciaPenaSepulveda/pese-ui/compare/v1.2.0...v1.3.0) (2026-11-15)
 
 
