@@ -6,17 +6,26 @@
   &__right { fill: var(--pese-ink); }
   &__dot { fill: var(--pese-acento); }
   &__letters { stroke: var(--pese-ink); }
+  &__subtitle {
+    fill: var(--pese-ink-muted);
+    font-family: var(--pese-font-mono, ui-monospace, monospace);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
 
   &--ink {
     .pese-logo__left,
     .pese-logo__right,
     .pese-logo__dot { fill: currentColor; }
     .pese-logo__letters { stroke: currentColor; }
+    .pese-logo__subtitle { fill: currentColor; }
   }
 
   &--white {
     .pese-logo__left,
     .pese-logo__right { fill: #fff; }
     .pese-logo__letters { stroke: #fff; }
+    .pese-logo__subtitle { fill: #fff; }
   }
 }

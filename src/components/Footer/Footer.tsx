@@ -1,6 +1,7 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 import { cx } from '../../utils/cx';
 import { Container } from '../Container/Container';
+import { Icon, type IconName } from '../Icon/Icon';
 import { Logo } from '../Logo/Logo';
 
 export type FooterTone = 'plain' | 'deep';
@@ -19,6 +20,15 @@ export type FooterGroup = {
   links: FooterLink[];
 };
 
+export type FooterSocial = {
+  /** Nombre de la red, que es el nombre accesible del enlace (por ejemplo, «Instagram de PESE»). */
+  label: string;
+  /** Dirección del perfil. */
+  href: string;
+  /** Icono de la red. */
+  icon: Extract<IconName, 'instagram' | 'linkedin'>;
+};
+
 export type FooterProps = Omit<HTMLAttributes<HTMLElement>, 'children'> & {
   /** Columnas de enlaces del sitio. */
   groups?: FooterGroup[];
@@ -26,6 +36,10 @@ export type FooterProps = Omit<HTMLAttributes<HTMLElement>, 'children'> & {
   description?: ReactNode;
   /** Datos de contacto: correo, zona de servicio, redes. Se muestran bajo el título `contactTitle`. */
   contact?: ReactNode;
+  /** Redes sociales: iconos con enlace bajo el logo. Cada una necesita su `label`, porque el icono no tiene texto. */
+  social?: FooterSocial[];
+  /** Nombre de la navegación de redes para lectores de pantalla. */
+  socialLabel?: string;
   /** Título de la columna de contacto. */
   contactTitle?: string;
   /** Texto legal de la franja inferior (por ejemplo, «© PESE. Todos los derechos reservados.»). */
@@ -73,6 +87,8 @@ export function Footer({
   description,
   contact,
   contactTitle = 'Contacto',
+  social = [],
+  socialLabel = 'Redes sociales',
   legal,
   legalLinks = [],
   tone = 'plain',
@@ -93,6 +109,19 @@ export function Footer({
               {logo ?? <Logo tone={tone === 'deep' ? 'white' : 'auto'} title={null} />}
             </a>
             {description && <p className="pese-footer__about">{description}</p>}
+            {social.length > 0 && (
+              <nav aria-label={socialLabel}>
+                <ul className="pese-footer__social">
+                  {social.map((item) => (
+                    <li key={item.href}>
+                      <a className="pese-footer__social-link" href={item.href} aria-label={item.label} rel="me noopener">
+                        <Icon name={item.icon} size={24} />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
           </div>
 
           {groups.length > 0 && (

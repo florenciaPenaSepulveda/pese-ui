@@ -96,10 +96,10 @@ La librería sigue el diseño atómico: los **átomos** (`Button`, `Badge`, `Sta
 | `LevelCard` | Tarjeta de nivel de servicio con hueco para la insignia amarilla. |
 | `LevelIndicator` | Barra de tres tramos para el nivel del cliente. |
 | `Steps` | Pasos con estado: hecho, en curso, pendiente. |
-| `Logo`, `Icon` | Logo y cinco iconos en SVG, con los colores del tema. |
+| `Logo`, `Icon` | Logo (con `subtitle` opcional, por ejemplo «Software») y siete iconos en SVG, con los colores del tema; incluye Instagram y LinkedIn. |
 | `Layout` | Estructura de página: cabecera, un solo `<main>` con `id` (destino del enlace «Saltar al contenido») y pie siempre abajo. Ya incluye `pese-root`. |
 | `Container` | Centra el contenido y limita su ancho (`narrow` 720 px, `default` 1120 px, `wide` 1280 px). |
-| `Header`, `Footer` | Cabecera con menú sin JavaScript y pie con columnas de enlaces, contacto y franja legal. |
+| `Header`, `Footer` | Cabecera con menú sin JavaScript y pie con columnas de enlaces, contacto, redes sociales (`social`) y franja legal. |
 | `Eyebrow` | Sobretítulo corto en tipografía de datos, sobre un título. |
 | `FieldHint`, `FieldError` | Ayuda y error de campo; el error empieza con la palabra «Error». |
 | `Hero` | Bloque principal de la portada: sobretítulo, titular (`h1`), texto, botones e imagen opcional. |
@@ -114,7 +114,7 @@ La librería sigue el diseño atómico: los **átomos** (`Button`, `Badge`, `Sta
 | `Breadcrumbs` | Migas de pan accesibles; la página actual lleva `aria-current`. |
 | `Faq` | Preguntas frecuentes con `details`/`summary` (sin JavaScript) y datos `FAQPage` opcionales. |
 | `JsonLd`, `faqPageJsonLd`, `breadcrumbListJsonLd` | Datos estructurados para buscadores (schema.org). |
-| `ContactForm` | Formulario de contacto completo (sin JavaScript): errores con resumen enlazado, aviso de envío, consentimiento y campo trampa contra bots. |
+| `ContactForm` | Formulario de contacto completo (sin JavaScript): errores con resumen enlazado, aviso de envío, consentimiento y campo trampa contra bots. Configurable: `fields` (elige, ordena y suma campos propios), `labels`, `hiddenFields` y `consent`. |
 | `ArticleCard`, `Pagination` | Tarjeta de artículo (un solo enlace) y paginación con enlaces normales. |
 | `LevelsTable` | Tabla que compara qué incluye cada nivel, con palabras además de símbolos. |
 

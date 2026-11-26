@@ -1,8 +1,8 @@
 import type { ReactElement, SVGAttributes } from 'react';
 import { cx } from '../../utils/cx';
 
-/** Iconos disponibles: conectar (sistemas), inventario, facturación, diagnóstico y soporte. */
-export type IconName = 'conectar' | 'inventario' | 'facturacion' | 'diagnostico' | 'soporte';
+/** Iconos disponibles: conectar (sistemas), inventario, facturación, diagnóstico y soporte, más las redes Instagram y LinkedIn. */
+export type IconName = 'conectar' | 'inventario' | 'facturacion' | 'diagnostico' | 'soporte' | 'instagram' | 'linkedin';
 
 export type IconProps = Omit<SVGAttributes<SVGSVGElement>, 'children' | 'viewBox'> & {
   /** Cuál icono dibujar. */
@@ -59,6 +59,24 @@ const SHAPES: Record<IconName, { line: ReactElement; dot: [number, number] }> = 
       </>
     ),
     dot: [16, 13.5],
+  },
+  instagram: {
+    line: (
+      <>
+        <rect x="4" y="4" width="24" height="24" rx="8" />
+        <circle cx="16" cy="16" r="6" />
+      </>
+    ),
+    dot: [23, 9],
+  },
+  linkedin: {
+    line: (
+      <>
+        <rect x="4" y="4" width="24" height="24" rx="5" />
+        <path d="M11 15.5V22M16 22V15.5M16 18.5C16 16.8 17.2 15.5 19 15.5C20.8 15.5 22 16.8 22 18.5V22" />
+      </>
+    ),
+    dot: [11, 10.5],
   },
 };
 
