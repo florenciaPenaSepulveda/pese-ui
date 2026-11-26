@@ -79,6 +79,24 @@
   }
 
   // Cada enlace mide al menos 44 px de alto (objetivo táctil) y va subrayado: no depende del color.
+  &__social {
+    display: flex;
+    gap: var(--pese-space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    color: inherit;
+    border-radius: var(--pese-radius-sm);
+  }
+  &--deep &__social-link .pese-icon__line { stroke: var(--pese-on-deep); }
+
   &__link {
     display: inline-flex;
     align-items: center;

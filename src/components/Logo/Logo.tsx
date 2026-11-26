@@ -12,6 +12,12 @@ export type LogoProps = Omit<SVGAttributes<SVGSVGElement>, 'children' | 'viewBox
   tone?: LogoTone;
   /** Texto accesible. Por defecto «PESE». Pasa `null` si el logo es decorativo. */
   title?: string | null;
+  /**
+   * Segunda línea bajo el nombre, por ejemplo «Software». Solo en `variant="logo"`. Hazla corta
+   * (hasta unas 12 letras) y usa el logo de 200 px de ancho o más para que se lea bien.
+   * Se anuncia junto al título: «PESE Software».
+   */
+  subtitle?: string;
 };
 
 const VIEWBOX: Record<LogoVariant, string> = {
@@ -48,10 +54,13 @@ const LETTERS = (
  * @example
  * ```tsx
  * <a href="/"><Logo width={160} /></a>
+ * <Logo width={220} subtitle="Software" />
  * ```
  */
-export function Logo({ variant = 'logo', tone = 'auto', title = 'PESE', className, ...rest }: LogoProps) {
-  const a11y = title ? { role: 'img' as const, 'aria-label': title } : { 'aria-hidden': true as const };
+export function Logo({ variant = 'logo', tone = 'auto', title = 'PESE', subtitle, className, ...rest }: LogoProps) {
+  const sub = variant === 'logo' ? subtitle : undefined;
+  const name = title && sub ? `${title} ${sub}` : title;
+  const a11y = name ? { role: 'img' as const, 'aria-label': name } : { 'aria-hidden': true as const };
   return (
     <svg
       {...rest}
@@ -68,7 +77,12 @@ export function Logo({ variant = 'logo', tone = 'auto', title = 'PESE', classNam
       ) : (
         <>
           {MARK}
-          <g transform="translate(84 14.5)">{LETTERS}</g>
+          <g transform={sub ? 'translate(84 6)' : 'translate(84 14.5)'}>{LETTERS}</g>
+          {sub && (
+            <text className="pese-logo__subtitle" x="85" y="58" fontSize="13">
+              {sub}
+            </text>
+          )}
         </>
       )}
     </svg>
